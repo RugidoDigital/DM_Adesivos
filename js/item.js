@@ -175,29 +175,29 @@ loja.templates = {
         
         <div class="col-md-6">
 
-        <div class="d-flex">
-            <form class="mb-3" action="index.html">
-                <button class="btn btn-outline-dark" type="submit">
-                    Voltar
-                </button>
-            </form>
+            <div class="d-flex">
+                <form class="mb-3" action="index.html">
+                    <button class="btn btn-outline-dark" type="submit">
+                        Voltar
+                    </button>
+                </form>
 
-            <form class="d-flex" action="carrinho.html">
-                <button class="btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
-                    Carrinho
-                </button>
-            </form>
-        </div>
+                <form class="d-flex" action="carrinho.html">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrinho
+                    </button>
+                </form>
 
 
-            
-            
+            </div>
 
             <h1 class="display-5 fw-bolder">\${name}</h1>
+
             <div class="fs-5 mb-5">
                 
             </div>
+
             <div class="d-flex">
 
                 <div class=" quantity-control me-4">
@@ -210,18 +210,13 @@ loja.templates = {
                     >+</button>
                 </div>                                
                                 
-
                 <div class="div-quantity-control">
-                
-                <button class="btn btn-outline-dark flex-shrink-0 me-4" type="button"
-                onclick="loja.metodos.adicionarAoCarrinho(\${id})">
-                    <i class="bi bi-bag-fill me-1"></i>
-                    Adicionar ao Carrinho
-                </button>
-
+                    <button class="btn btn-outline-dark flex-shrink-0 me-4" type="button"
+                    onclick="loja.metodos.adicionarAoCarrinho(\${id})">
+                        <i class="bi bi-bag-fill me-1"></i>
+                        Adicionar ao Carrinho
+                    </button>
                 </div>
-
-                
 
             </div>
         </div>
