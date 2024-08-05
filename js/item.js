@@ -172,7 +172,68 @@ loja.templates = {
     item: `
         <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="\${img}" alt="..." /></div>
 
-        
+
+        <div div class="col-md-6">
+            <div class="product-header">
+                <span>Marca: Adesivex</span>
+            </div>
+
+            <div class="product-title">
+                Adesivo texturizado vermelho vinho couro
+            </div>
+
+            <hr>
+
+            <div class="product-price">
+                R$ 172
+            </div>
+
+            <div class="product-quantity">
+
+                <p class="quantity-label-item">Quantidade: </p>
+                <div class=" quantity-control me-4">
+                    <button class="btn-cart-control btn-subtract me-2" 
+                    onclick="loja.metodos.btnSubtract()"
+                    >-</button>
+                    <span class="quantity-label me-2" id="inputQuantity">1</span>
+                    <button class="btn-cart-control btn-add"
+                    onclick="loja.metodos.btnAdd()"
+                    >+</button>
+                </div>
+
+                <button class="add-to-cart-btn" onclick="loja.metodos.adicionarAoCarrinho(\${id})">
+                Adicionar ao carrinho</button>
+            </div>
+
+            <div class="product-description">
+                <p>Sobre este item</p>
+                <ul>
+                    <li>Resistente à água</li>
+                    <li>Texturizado</li>
+                    <li>Ideal para móveis</li>
+                </ul>
+            </div>
+
+            <div class="product-actions">
+                <form class="mb-3" action="index.html">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi bi-arrow-left-square-fill me-2"></i>
+                        Continuar Comprando
+                    </button>
+                </form>
+
+                <form class="d-flex" action="carrinho.html">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-2"></i>
+                        Carrinho
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- Favicon
         <div class="col-md-6">
 
             <div class="d-flex">
@@ -182,12 +243,13 @@ loja.templates = {
                     </button>
                 </form>
 
-                <form class="d-flex" action="carrinho.html">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Carrinho
+                <div class="div-quantity-control">
+                    <button class="btn btn-outline-dark flex-shrink-0 me-4" type="button"
+                    onclick="loja.metodos.adicionarAoCarrinho(\${id})">
+                        <i class="bi bi-bag-fill me-1"></i>
+                        Adicionar ao Carrinho
                     </button>
-                </form>
+                </div>
 
 
             </div>
@@ -200,15 +262,7 @@ loja.templates = {
 
             <div class="d-flex">
 
-                <div class=" quantity-control me-4">
-                    <button class="btn-cart-control btn-subtract me-2" 
-                    onclick="loja.metodos.btnSubtract()"
-                    >-</button>
-                    <span class="quantity-label me-2" id="inputQuantity">1</span>
-                    <button class="btn-cart-control btn-add"
-                    onclick="loja.metodos.btnAdd()"
-                    >+</button>
-                </div>                                
+                                               
                                 
                 <div class="div-quantity-control">
                     <button class="btn btn-outline-dark flex-shrink-0 me-4" type="button"
@@ -219,7 +273,7 @@ loja.templates = {
                 </div>
 
             </div>
-        </div>
+        </div>-->
     `,
 
     itemRelacionado:`
