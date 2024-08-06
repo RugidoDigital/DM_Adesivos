@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     loja.eventos.init();
 });
 
+window.onscroll = function() {
+    var floatButton = document.querySelector('.float-button');
+    if (document.documentElement.scrollTop > 200) { // Exibe o botão após rolar 200px
+        floatButton.style.display = 'block';
+    } else {
+        floatButton.style.display = 'none';
+    }
+};
+
 var itemExibidosNoMenu = [];
 
 var loja = {};
@@ -10,10 +19,10 @@ loja.eventos = {
 
     init: () => {
         console.log("Função init está sendo chamada.");
-        //carrinhoDeCompras.carregarCarrinho();
-        //loja.metodos.atualizarBadge(carrinhoDeCompras.calcularTotalQuantidade());
+        carrinhoDeCompras.carregarCarrinho();
+        loja.metodos.atualizarBadge(carrinhoDeCompras.calcularTotalQuantidade());
         loja.metodos.obterItensLojaInicio();
-        //loja.metodos.verMais();
+        loja.metodos.verMais();
     }
 }
 
@@ -211,9 +220,6 @@ function buscarComTratamento(termo) {
     });
   }
   
-  
-
-
 
 async function imagemExiste(url) {
     try {

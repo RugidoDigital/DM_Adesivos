@@ -4650,6 +4650,26 @@ textarea.form-control-lg {
   vertical-align: baseline;
   border-radius: var(--bs-badge-border-radius);
 }
+
+.badge_float-button {
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: 0.375rem;
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+}
+
 .badge:empty {
   display: none;
 }
@@ -11370,4 +11390,28 @@ form {
 
 .feedback-busca-no-items p {
   margin-bottom: 30px; /* aumentando o espaço entre o parágrafo e o botão */
+}
+
+/* estilo do botão flutuante */
+
+.float-button {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  top: 250px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Sobrepõe os demais elementos */
+  transition: background-color 0.3s ease;
+  transition: opacity 0.7s ease; /* Transição suave */
+
+}
+
+.float-button:hover {
+  background-color: #e6b800;
 }
