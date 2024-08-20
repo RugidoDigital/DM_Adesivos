@@ -6,7 +6,7 @@ var loja = {};
 
 var MEU_ENDERECO = null;
 
-var CELULAR_EMPRESA = '5592981966604' 
+var CELULAR_EMPRESA = '5592992577657'
                        
 
 loja.eventos = {
