@@ -1,107 +1,252 @@
 var  MENU = [{
   "id": 1,
-  "name": "Adesivo 1",
-  "categoria": "Parede",
-  "marca": "Marca X",
-  "img": "assets/img_produtos/papel_de_parede_adesivo_madeira.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA CARVALHO MC 1701",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 2,
-  "name": "Adesivo 2",
-  "categoria": "Piso",
-  "marca": "Marca Y",
-  "img": "assets/img_produtos/adesivo_piso.jpeg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA CARVALHO MC 1703",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 3,
-  "name": "Adesivo 3",
-  "categoria": "Texturizado ",
-  "marca": "Marca z",
-  "img": "assets/img_produtos/adesivo_texturizado_couro_vermelho.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA CARVALHO MC 1704",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 4,
-  "name": "Adesivo 4",
-  "categoria": "Relevo 3D",
-  "marca": "Marca X",
-  "img": "assets/img_produtos/adesivo_3d.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA CARVALHO MC 1705",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 5,
-  "name": "Adesivo 5",
-  "categoria": "Parede",
-  "marca": "Marca Y",
-  "img": "assets/img_produtos/papel_de_parede_adesivo_madeira.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA CARVALHO MC 1801",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 6,
-  "name": "Adesivo 6",
-  "categoria": "Piso",
-  "marca": "Marca z",
-  "img": "assets/img_produtos/adesivo_piso.jpeg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA CARVALHO MC 1701",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 7,
-  "name": "Adesivo 7",
-  "categoria": "Texturizado ",
-  "marca": "Marca X",
-  "img": "assets/img_produtos/adesivo_texturizado_couro_vermelho.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA IMBUIA MI - 102",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 8,
-  "name": "Adesivo 8",
-  "categoria": "Relevo 3D",
-  "marca": "Marca Y",
-  "img": "assets/img_produtos/adesivo_3d.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA FREIJÓ",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 9,
-  "name": "Adesivo 9",
-  "categoria": "Parede",
-  "marca": "Marca z",
-  "img": "assets/img_produtos/papel_de_parede_adesivo_madeira.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA DEMOLIÇÃO - 1903",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 10,
-  "name": "Adesivo 10",
-  "categoria": "Piso",
-  "marca": "Marca X",
-  "img": "assets/img_produtos/adesivo_piso.jpeg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA DEMOLIÇÃO - 1904",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 11,
-  "name": "Adesivo 11",
-  "categoria": "Texturizado ",
-  "marca": "Marca Y",
-  "img": "assets/img_produtos/adesivo_texturizado_couro_vermelho.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA MD - 1902",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 12,
-  "name": "Adesivo 12",
-  "categoria": "Relevo 3D",
-  "marca": "Marca z",
-  "img": "assets/img_produtos/adesivo_3d.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA ML 2201",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 13,
-  "name": "Adesivo 13",
-  "categoria": "Parede",
-  "marca": "Marca X",
-  "img": "assets/img_produtos/papel_de_parede_adesivo_madeira.jpg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA MJ 2201",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 14,
-  "name": "Adesivo 14",
-  "categoria": "Piso",
-  "marca": "Marca Y",
-  "img": "assets/img_produtos/adesivo_piso.jpeg"
-},
-{
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA JEQUITIBA - 2301",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
   "id": 15,
-  "name": "Adesivo 15",
-  "categoria": "Texturizado ",
-  "marca": "Marca z",
-  "img": "assets/img_produtos/adesivo_texturizado_couro_vermelho.jpg"
-}
-];
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA JEQUITIBA - 2302",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 16,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA JEQUITIBA - 2303",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 17,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA JEQUITIBA - 2304",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 18,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA CILIEGIO",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 19,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA MARFIM",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 20,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA RIPADA MR - 2101",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 21,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA RIPADA MR - 2102",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 22,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA RIPADA MR - 2103",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 23,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA RIPADA MR - 2104",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 24,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA RIPADA MRX - 2401",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}, {
+  "id": 25,
+  "marca": "Imprimax ",
+  "name": "VINIL GOLD MADEIRA RIPADA MRX - 2402",
+  "categoria": "GOLD MADEIRAS",
+  "sobre": "detalhes do produto ...",
+  "largura": "1.22M",
+  "price": 2.5,
+"price": 2.5,
+"img":  "assets/img_produtos/adesivo_piso.jpeg"
+}];
 

@@ -30,6 +30,8 @@ loja.metodos = {
         .replace(/\${img}/g, item[0])
         .replace(/\${name}/g, item[1])
         .replace(/\${id}/g, item[2])
+        .replace(/\${price}/g, item[3])
+
     
         // Adiciona os itens ao #itensProduto
         $("#itensProduto").append(temp);
@@ -45,6 +47,7 @@ loja.metodos = {
                 .replace(/\${img}/g, itens[i].img)
                 .replace(/\${name}/g, itens[i].name)
                 .replace(/\${id}/g, itens[i].id)
+                .replace(/\${price}/g, itens[i].price)
     
             // Adiciona os itens ao #itensProdutos
             $("#itensProdutos").append(temp);
@@ -185,7 +188,7 @@ loja.templates = {
             <hr>
 
             <div class="product-price">
-                R$ 172
+                R$ \${price}
             </div>
 
             <div class="product-quantity">
@@ -291,13 +294,15 @@ loja.templates = {
                     <!-- Product name-->
                     <h5 class="fw-bolder">\${name}</h5>
                     <!-- Product price-->
+                    <h2 class="fw-bolder">\${price}</h2>
+                    
                     
                 </div>
             </div>
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
-                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}'])"
+                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price}'])"
                 >Comprar</a></div>
             </div>
         </div>

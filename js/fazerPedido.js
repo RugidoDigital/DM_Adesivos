@@ -41,16 +41,16 @@ loja.metodos = {
 
     resumoPedido: () => {
 
-        let cep = $("#txtCEP").val().trim();
+        //let cep = $("#txtCEP").val().trim();
         let endereco = $("#txtEndereco").val().trim();
-        let bairro = $("#txtBairro").val().trim();
-        let cidade = $("#txtCidade").val().trim();
+        // let bairro = $("#txtBairro").val().trim();
+        // let cidade = $("#txtCidade").val().trim();
         let uf = $("#ddlUf").val().trim();
-        let numero = $("#txtNumero").val().trim();
-        let complemento = $("#txtComplemento").val().trim();
+        // let numero = $("#txtNumero").val().trim();
+        // let complemento = $("#txtComplemento").val().trim();
         let nome = $("#txtNome").val().trim();
         let numeroTelefone = $("#txtTelefone").val().trim();
-        let empresa = $("#txtEmpresa").val().trim();
+        // let empresa = $("#txtEmpresa").val().trim();
 
 
         if (nome.length <= 0) {
@@ -65,18 +65,18 @@ loja.metodos = {
             return;
         }
 
-        if (empresa.length <= 0) {
-            loja.metodos.mensagem('Informe o Nome da Empresa, por favor.');
-            $("#txtEmpresa").focus();
-            return;
-        }
+        // if (empresa.length <= 0) {
+        //     loja.metodos.mensagem('Informe o Nome da Empresa, por favor.');
+        //     $("#txtEmpresa").focus();
+        //     return;
+        // }
 
-        if (cep.length <= 0) {
-            loja.metodos.mensagem('Informe o CEP, por favor.');
-            //showToast();
-            $("#txtCEP").focus();
-            return;
-        }
+        // if (cep.length <= 0) {
+        //     loja.metodos.mensagem('Informe o CEP, por favor.');
+        //     //showToast();
+        //     $("#txtCEP").focus();
+        //     return;
+        // }
 
         if (endereco.length <= 0) {
             loja.metodos.mensagem('Informe o Endereço, por favor.');
@@ -84,17 +84,17 @@ loja.metodos = {
             return;
         }
 
-        if (bairro.length <= 0) {
-            loja.metodos.mensagem('Informe o Bairro, por favor.');
-            $("#txtBairro").focus();
-            return;
-        }
+        // if (bairro.length <= 0) {
+        //     loja.metodos.mensagem('Informe o Bairro, por favor.');
+        //     $("#txtBairro").focus();
+        //     return;
+        // }
 
-        if (cidade.length <= 0) {
-            loja.metodos.mensagem('Informe a Cidade, por favor.');
-            $("#txtCidade").focus();
-            return;
-        }
+        // if (cidade.length <= 0) {
+        //     loja.metodos.mensagem('Informe a Cidade, por favor.');
+        //     $("#txtCidade").focus();
+        //     return;
+        // }
 
         if (uf == "-1") {
             loja.metodos.mensagem('Informe a UF, por favor.');
@@ -102,25 +102,25 @@ loja.metodos = {
             return;
         }
 
-        if (numero.length <= 0) {
-            loja.metodos.mensagem('Informe o Número, por favor.');
-            $("#txtNumero").focus();
-            return;
-        }
+        // if (numero.length <= 0) {
+        //     loja.metodos.mensagem('Informe o Número, por favor.');
+        //     $("#txtNumero").focus();
+        //     return;
+        // }
 
         
 
         MEU_ENDERECO = {
             nome: nome,
-            empresa: empresa,
+            //empresa: empresa,
             numeroTelefone: numeroTelefone,
-            cep: cep,
+            // cep: cep,
             endereco: endereco,
-            bairro: bairro,
-            cidade: cidade,
+            // bairro: bairro,
+            // cidade: cidade,
             uf: uf,
-            numero: numero,
-            complemento: complemento
+            // numero: numero,
+            // complemento: complemento
         }
 
         loja.metodos.carregarResumo();
@@ -156,12 +156,9 @@ loja.metodos = {
             var texto = 'Olá! Vim pelo catálogo e gostaria de fazer meu pedido:';
             texto += `\n*Itens do pedido:*\n\n\${itens}`;
             texto += '\n*Endereço de entrega:*';
-            texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
-            texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
+            texto += `\n${MEU_ENDERECO.endereco} - ${MEU_ENDERECO.uf}`;
 
             texto += `\nCliente: ${MEU_ENDERECO.nome}`;
-            texto += `\nEmpresa: ${MEU_ENDERECO.empresa}`;
-
             //texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}*`;
             
             console.log("passou do texto");
