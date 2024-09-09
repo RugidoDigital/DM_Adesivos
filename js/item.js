@@ -24,13 +24,17 @@ loja.metodos = {
         console.log("Item ", item[0]);
 
         loja.metodos.getProximosElementos(parseInt(item[2]) - 1);
-        console.log((parseInt(item[2]))-1);
+        
+        let preco = parseFloat(item[3]).toFixed(2);
+        preco = preco.replace('.', ',') + " R$";
 
         let temp = loja.templates.item
         .replace(/\${img}/g, item[0])
         .replace(/\${name}/g, item[1])
         .replace(/\${id}/g, item[2])
-        .replace(/\${price}/g, item[3])
+        .replace(/\${price}/g, preco)
+        .replace(/\${marca}/g, item[4])
+        .replace(/\${largura}/g, item[5])
 
     
         // Adiciona os itens ao #itensProduto
@@ -48,6 +52,8 @@ loja.metodos = {
                 .replace(/\${name}/g, itens[i].name)
                 .replace(/\${id}/g, itens[i].id)
                 .replace(/\${price}/g, itens[i].price)
+                .replace(/\${marca}/g, itens[i].marca)
+                .replace(/\${largura}/g, itens[i].largura)
     
             // Adiciona os itens ao #itensProdutos
             $("#itensProdutos").append(temp);
@@ -178,11 +184,11 @@ loja.templates = {
 
         <div div class="col-md-6">
             <div class="product-header">
-                <span>Marca: Adesivex</span>
+                <span>Marca: \${marca}</span>
             </div>
 
             <div class="product-title">
-                Adesivo texturizado vermelho vinho couro
+                \${name}
             </div>
 
             <hr>
@@ -211,9 +217,11 @@ loja.templates = {
             <div class="product-description">
                 <p>Sobre este item</p>
                 <ul>
-                    <li>Resistente à água</li>
-                    <li>Texturizado</li>
-                    <li>Ideal para móveis</li>
+                    <li>Largura : \${largura}</li>
+                    <li>Impermeável</li>
+                    <li>Lavável</li>
+                    <li>Antibacteriano</li>
+                    <li>Auto colante</li>
                 </ul>
             </div>
 
@@ -302,7 +310,7 @@ loja.templates = {
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
-                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price}'])"
+                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price},\${marca},\${largura}'])"
                 >Comprar</a></div>
             </div>
         </div>

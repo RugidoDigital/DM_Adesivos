@@ -64,11 +64,12 @@ var carrinhoDeCompras = {
     // Calcular o total do carrinho
     calcularTotal: function() {
         let total = 0;
-        
         this.itens.forEach(function(item) {
-            total += parseFloat(item.preco.replace(',', '.')) * item.quantidade;
+            total += (item.preco * item.quantidade);            
+            //total += parseFloat(item.preco.replace(',', '.')) * item.quantidade;
         });
 
+        console.log("teste >>>>>>", total.toFixed(2))
         total = total.toFixed(2);
         return total;
     },

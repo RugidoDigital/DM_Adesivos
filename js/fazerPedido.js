@@ -33,6 +33,8 @@ loja.metodos = {
                 .replace(/\${img}/g, itens[i].img)
                 .replace(/\${name}/g, itens[i].name)
                 .replace(/\${qtd}/g, itens[i].quantidade)
+                .replace(/\${total}/g, (itens[i].preco * itens[i].quantidade))
+                .replace(/\${price}/g, itens[i].preco)
             // Adiciona os itens ao #itensProdutos
             $("#itensProdutosCarrinho").append(temp);
         }
@@ -237,18 +239,42 @@ function showToast() {
     }
 }
 
-
+function formatCurrency(value) {
+    let formattedValue = value.toFixed(2);
+    formattedValue = formattedValue.replace('.', ',');
+    return formattedValue + " R$";
+}
 
 loja.templates = {
 
     itemResumo:`
-        <div class="container-list-resume">
-        <div class="card-list-resume">
-            <img src="\${img}" >
-            <div class="item-name">\${name}</div>
-            <div class="item-quantity">X \${qtd}</div>
+        <div class="container">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="\${img}" class="card-img" alt="Imagem do produto">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">\${name}</h5>
+                        <p class="card-text">
+                            <label>Preço:<span class="item-price">\${price}</span></label> 
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="card-text">
+                                    <label>Quantidade:</label> <span class="item-quantity">\${qtd}</span>
+                                </p>
+                                <p class="card-text">
+                                    <label>Total:</label> <span class="item-total">\${total}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
+    </div>
     `
 
 }

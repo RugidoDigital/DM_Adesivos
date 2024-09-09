@@ -59,11 +59,19 @@ loja.metodos = {
         console.log('Ultimo index exibido -> ',lastIndex);
 
         for (var i = lastIndex; i < tamanhoDaListagem && i < lastIndex + 25; i++) {
+
+            let preco = itemExibidosNoMenu[i].price.toFixed(2);
+            preco = preco.replace('.', ',') + " R$";
+
             let temp = loja.templates.item
                 .replace(/\${img}/g, itemExibidosNoMenu[i].img)
                 .replace(/\${name}/g, itemExibidosNoMenu[i].name)
                 .replace(/\${id}/g, itemExibidosNoMenu[i].id)
+                .replace(/\${price-show}/g, preco)
                 .replace(/\${price}/g, itemExibidosNoMenu[i].price)
+                .replace(/\${marca}/g, itemExibidosNoMenu[i].marca)
+                .replace(/\${largura}/g, itemExibidosNoMenu[i].largura)
+                
     
             // Adiciona os itens ao #itensProdutos
             
@@ -257,13 +265,13 @@ loja.templates = {
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">\${name}</h5>
                                     <!-- Product price-->
-                                    <h1 class="fw-bolder">\${price}</h5>
+                                    <h1 class="fw-bolder">\${price-show}</h5>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
-                                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price}'])"
+                                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price},\${marca},\${largura}'])"
                                 >Comprar</a></div>
                             </div>
                         </div>
@@ -288,7 +296,6 @@ function showDropdown() {
     $("#dropdown-menu").addClass('show');
     //dropdownMenu.addClass("show");
 }
-
 
 
 document.addEventListener("DOMContentLoaded", function() {
