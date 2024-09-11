@@ -193,7 +193,9 @@ loja.metodos = {
 
     atualizarBadge:(value) =>{
         var badgeSpan = document.getElementById('badgeCart');
+        var badgeSpanFloat = document.getElementById('badgeCartFloat');
         badgeSpan.textContent = value;
+        badgeSpanFloat.textContent = value;
     },
 
     btnSubtract:() =>{
