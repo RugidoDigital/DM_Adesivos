@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
     loja.eventos.init();
 });
 
+const button = document.getElementById("float-button-carrinho");
+
+    button.onclick = function() {
+        window.location.href = "carrinho.html";
+    };
+
 window.onscroll = function() {
     var floatButton = document.querySelector('.float-button');
     if (document.documentElement.scrollTop > 200) { // Exibe o botão após rolar 200px
@@ -120,19 +126,19 @@ loja.metodos = {
         var categorias = []
         switch (value) {
             case 1:
-                categorias = ['Texturizado '];
+                categorias = ['MADEIRAS'];
               break;
 
             case 2:
-                categorias =['Relevo 3D'];
+                categorias =['PEDRAS'];
               break;
 
             case 3:
-                categorias = ['Parede'];
+                categorias = ['METAL'];
             break;
 
             case 4:
-                categorias = ['Piso'];
+                categorias = ['DIVERSOS'];
             break;
 
             default:
