@@ -26,7 +26,7 @@ loja.metodos = {
         loja.metodos.getProximosElementos(parseInt(item[2]) - 1);
         
         let preco = parseFloat(item[3]).toFixed(2);
-        preco = preco.replace('.', ',') + " R$";
+        preco = preco.replace('.', ',');
 
         let temp = loja.templates.item
         .replace(/\${img}/g, item[0])
@@ -43,14 +43,15 @@ loja.metodos = {
     }, 
 
     obterItensRelacionado:(itens) =>{
-        
         console.log("Elementos Relacionados ",itens);
 
         for (var i = 0; i < itens.length; i++) {
+            let preco = itens[i].price.toFixed(2).replace('.', ',');
             let temp = loja.templates.itemRelacionado
                 .replace(/\${img}/g, itens[i].img)
                 .replace(/\${name}/g, itens[i].name)
                 .replace(/\${id}/g, itens[i].id)
+                .replace(/\${price}/g, preco)
                 .replace(/\${price}/g, itens[i].price)
                 .replace(/\${marca}/g, itens[i].marca)
                 .replace(/\${largura}/g, itens[i].largura)
@@ -302,7 +303,7 @@ loja.templates = {
                     <!-- Product name-->
                     <h5 class="fw-bolder">\${name}</h5>
                     <!-- Product price-->
-                    <h2 class="fw-bolder">\${price}</h2>
+                    <h2 class="fw-bolder">R$ \${price}</h2>
                     
                     
                 </div>

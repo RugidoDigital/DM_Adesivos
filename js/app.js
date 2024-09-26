@@ -65,10 +65,9 @@ loja.metodos = {
         console.log('Ultimo index exibido -> ',lastIndex);
 
         for (var i = lastIndex; i < tamanhoDaListagem && i < lastIndex + 25; i++) {
-
-            let preco = itemExibidosNoMenu[i].price.toFixed(2);
-            preco = preco.replace('.', ',') + " R$";
-
+            
+            //Dessa forma o R$ fica na frente do valor do produto
+            let preco = "R$ " + itemExibidosNoMenu[i].price.toFixed(2).replace('.', ',');
             let temp = loja.templates.item
                 .replace(/\${img}/g, itemExibidosNoMenu[i].img)
                 .replace(/\${name}/g, itemExibidosNoMenu[i].name)

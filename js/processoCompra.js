@@ -40,9 +40,7 @@ loja.metodos = {
 
         for (var i = 0; i < itens.length; i++) {
 
-            let preco = itens[i].preco.toFixed(2);
-            preco = preco.replace('.', ',') + " R$";
-
+            let preco = itens[i].preco.toFixed(2).replace('.', ',');
             let temp = loja.templates.itemCarrinho
                 .replace(/\${img}/g, itens[i].img)
                 .replace(/\${name}/g, itens[i].name)
@@ -98,7 +96,7 @@ loja.metodos = {
     atualizarValorTotal:(value) =>{
         let valorTotal = document.getElementById('total-carrinho');
         if(valorTotal != null){
-            valorTotal.textContent = value.replace('.', ',') + " R$";
+            valorTotal.textContent = "R$ " + value.replace('.', ',');
         } else
             valorTotal.textContent = "0,00" + " R$";
     },
@@ -141,7 +139,7 @@ loja.templates = {
                                     <h5 class="fw-bolder">\${name}</h5>
                                     <!-- Product price-->
                                     <br>
-                                    <h5 class="fw-bolder">\${price}</h5>
+                                    <h5 class="fw-bolder">R$ \${price}</h5>
                                     
                                 </div>
                             </div>
