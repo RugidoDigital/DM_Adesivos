@@ -11284,7 +11284,7 @@ form {
 }
 
 .fullscreen-image {
-  width: 100vw; /* Usando vw para representar 100% da largura da tela */
+  width: 100%; /* Usando vw para representar 100% da largura da tela */ /* Coloquei como % mesmo, para a página deixar de scrollar na horizontal*/
   /*height: 100vh;  Usando vh para representar 100% da altura da tela */
   object-fit: cover; /* Garante que a imagem cubra todo o espaço da tela */
   z-index: 1; /* Garante que a imagem fique abaixo do navbar */
