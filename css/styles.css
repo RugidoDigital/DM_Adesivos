@@ -11415,3 +11415,23 @@ form {
 .float-button:hover {
   background-color: #e6b800;
 }
+
+.feedback-busca-no-items p {
+  margin-bottom: 30px; /* aumentando o espaço entre o parágrafo e o botão */
+}
+
+.price {
+  font-family: Arial, sans-serif;
+  line-height: 1; /* Garante que o espaçamento vertical seja consistente */
+}
+
+.currency {
+  font-size: 0.8em; /* Tamanho menor para o símbolo de moeda */
+  position: relative;
+  top: -0.5em; /* Ajuste fino */
+}
+
+.value {
+  font-size: 1.5em; /* Valor principal maior */
+  line-height: 1; /* Remove o espaçamento extra entre linhas */
+}

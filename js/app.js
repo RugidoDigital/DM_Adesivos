@@ -272,7 +272,10 @@ loja.templates = {
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">\${name}</h5>
                                     <!-- Product price-->
-                                    <h1 class="fw-bolder">\${price-show}</h5>
+                                    <span class="price">
+                                        <span class="currency">R$</span>
+                                        <span class="value">\${price-show}</span>
+                                    </span>
                                 </div>
                             </div>
                             <!-- Product actions-->

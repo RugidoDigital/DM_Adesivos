@@ -195,7 +195,10 @@ loja.templates = {
             <hr>
 
             <div class="product-price">
-                R$ \${price}
+                <span class="price">
+                <span class="currency">R$</span>
+                <span class="value">\${price}</span>
+                </span>                 
             </div>
 
             <div class="product-quantity">
@@ -315,34 +318,6 @@ loja.templates = {
                 >Comprar</a></div>
             </div>
         </div>
-    </div>
-    `,
-
-    itemCarrinho:`
-    <div class="col mb-4">
-        <div class="card custom-card">
-            <!-- Product image-->
-            <div class="card-cont-cart">
-                <img class="card-img-top" src="\${img}" alt="..." />
-            </div>
-            <!-- Product details-->
-            <div class="card-body custom-card-content">
-                <div class="text-center">
-                    <!-- Product name-->
-                    <h5 class="fw-bolder">\${name}</h5>
-                    <!-- Product price-->
-                </div>
-            </div>
-                !-- Product actions-->
-
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html"
-                                onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}'])"
-                                >Comprar</a></div>
-                </div>
-
-            </div>
-        </div>                    
     </div>
     `
 
