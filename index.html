@@ -14,80 +14,73 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navigation-->
-        
-        <nav class="navbar-custom-top-header">
-          
-      
-              <!-- Logo -->
-              <a href="index.html" class="navbar-brand">
-                  <img class="logo-image" src="assets/assets_img/logo-dm.jpg" alt="Campos" width="140px"> <!-- Reduzindo o tamanho da logo -->
-              </a>
-      
-              <!-- Elementos à direita -->
-              <div class="d-flex align-items-center">
-                  <!-- Ícones de redes sociais -->
-                    <a href="https://www.facebook.com/dm.adesivoss" target="_blank" class="social-icon me-2">
-                        <span class="social-ico-icon">
-                            <i class="bi bi-facebook"></i>
-                        </span>
-                    </a>
-                    <a href="https://api.whatsapp.com/message/3W6RV5ZMBSXMO1?autoload=1&app_absent=0" target="_blank" class="social-icon me-2">
-                        <span class="social-ico-icon">
-                            <i class="bi bi-whatsapp"></i>
-                        </span>
-                    </a>
-                    <a href="https://www.instagram.com/dmadesivoss/" target="_blank" class="social-icon me-2">
-                        <span class="social-ico-icon">
-                            <i class="bi bi-instagram"></i>
-                        </span>
-                    </a>
-      
-                   <!-- Botão Carrinho -->
-                  <form style="display: flex !important;" action="carrinho.html"> 
-                    <button class="custom-button btn-lg" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        <span class="d-none d-lg-inline">Carrinho</span> <!-- Oculta o texto em dispositivos móveis -->
-                        <span class="badge" id="badgeCart">0</span>
-                    </button>
-                  </form>
-              </div>
-
-      </nav>
-      
-      
-        <!-- Header-->
-
-        <div class="div_marcacao"></div>
-        <img class="fullscreen-image" src="assets/assets_img/banner-site.jpg">
-
-        <button class="float-button custom-button btn-lg" type="submit" id="float-button-carrinho">
-              <i class="bi-cart-fill me-1"></i>
-              <span class="badge" id="badgeCartFloat">0</span>
-        </button>
-
-        <nav class="navbar-custom-top-header" id="filtro">
-          <div class="navbar-left-custom-top-header">
-            <ul class="nav-links-custom-top-header">
-              <li><a href="#filtro"  onclick="loja.metodos.obterItensPorTag(1)">Madeiras</a></li>
-              <li><a href="#filtro"  onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
-              <li><a href="#filtro"  onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
-              <li class="d-none d-lg-inline"><a href="#filtro" onclick="loja.metodos.obterItensPorTag(4)">Diversos</a></li>
-              <!--<li><a href="#" id="ver_mais_link">Ver mais</a></li>-->
-            </ul>
+    <!-- Navigation-->
+    <nav class="fullscreen-image"><!-- navbar-custom-top-header -->
+      <div class="container px-5">
+        <div class="row">
+          <div class="col">
+            <a href="index.html" class="navbar-brand">
+              <img width="65px" src="assets/ICONE.png" alt="Campos"> 
+            </a>
           </div>
-
-          <div class="navbar-right-custom-top-header">
-            <div class="search-form-custom-top-header">
-              <input  id="inputPesquisa" type="text" placeholder="  Buscar..." style="border-radius: 20px; border: 2px solid #090db7;">
-              <button class="btn btn-success my-2 my-sm-0 rounded-circle"  
-              style="width: 40px; height: 40px; background-color: #090db7; margin-left: 12px !important;"
-              onclick="loja.metodos.obterItensPorPesquisa()"><i class="bi-search"></i></button>
+          <div class="col">
+            <div class="d-flex align-items-center">
+              <!-- Ícones de redes sociais -->
+              <a href="https://www.facebook.com/dm.adesivoss" target="_blank" class="social-icon me-2">
+                <span class="social-ico-icon">
+                    <i class="bi bi-facebook"></i>
+                </span>
+              </a>
+              <a href="https://api.whatsapp.com/message/3W6RV5ZMBSXMO1?autoload=1&app_absent=0" target="_blank" class="social-icon me-2">
+                <span class="social-ico-icon">
+                    <i class="bi bi-whatsapp"></i>
+                </span>
+              </a>
+              <a href="https://www.instagram.com/dmadesivoss/" target="_blank" class="social-icon me-2">
+                <span class="social-ico-icon">
+                    <i class="bi bi-instagram"></i>
+                </span>
+              </a>
+              <!-- Botão Carrinho -->
+              <form style="display: flex !important;" action="carrinho.html"> 
+                <button class="custom-button btn-lg" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    <span class="d-none d-lg-inline">Carrinho</span> <!-- Oculta o texto em dispositivos móveis -->
+                    <span class="badge" id="badgeCart">0</span>
+                </button>
+              </form>
             </div>
           </div>
-
+        </div>
+      </nav>
+      <!-- Header-->
+      <button class="float-button custom-button btn-lg" type="submit" id="float-button-carrinho">
+            <i class="bi-cart-fill me-1"></i>
+            <span class="badge" id="badgeCartFloat">0</span>
+      </button>
+      
+        <nav class="navbar-custom-top-header" id="filtro">
+          <div class="container">
+            <div class="navbar-left-custom-top-header">
+              <ul class="nav-links-custom-top-header">
+                <li><a href="#filtro"  onclick="loja.metodos.obterItensPorTag(1)">Madeiras</a></li>
+                <li><a href="#filtro"  onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
+                <li><a href="#filtro"  onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
+                <li class="d-none d-lg-inline"><a href="#filtro" onclick="loja.metodos.obterItensPorTag(4)">Diversos</a></li>
+                <!--<li><a href="#" id="ver_mais_link">Ver mais</a></li>-->
+              </ul>
+            </div>
+            <div class="px-5">
+              <div class="search-form-custom-top-header">
+                <input  id="inputPesquisa" type="text" placeholder="  Buscar..." style="border-radius: 20px; border: 2px solid #090db7;">
+                <button class="btn btn-success my-2 my-sm-0 rounded-circle"  
+                style="width: 40px; height: 40px; background-color: #090db7; margin-left: 12px !important;"
+                onclick="loja.metodos.obterItensPorPesquisa()"><i class="bi-search"></i></button>
+              </div>
+            </div>
+          </div>
         </nav>
-
+          
         <style>/* Reset CSS */
           * {
             margin: 0;
@@ -112,7 +105,7 @@
           .nav-links-custom-top-header {
             list-style: none;
             display: flex;
-            justify-content: space-around; /* Alterado para space-around */
+            justify-content: center; /* Alterado para space-around */
             align-items: center; /* Centraliza verticalmente */
             margin-bottom: 0 !important;
           }
@@ -141,12 +134,13 @@
             color: #090db7; /* Cor verde */
             transition: color 0.3s ease; /* Transição suave */
             text-decoration: none;
-            padding: 10px;
+            padding: 2vw;
           }
           
           .navbar-right-custom-top-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
           }
           
           .search-form-custom-top-header {
@@ -204,177 +198,6 @@
           }
           
         </style>
-                  
-        <!-- <div class="dropdown-display">
-            <div class="dropdown-menu-custom" id="dropdown-menu">
-                <ul class="category-list">
-                    <button class="dropdown-btn">Buscar</button>
-                    <li class="category-item">
-                        
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Acessório para cães</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li><input type="checkbox">Coleira</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Acessório para gatos</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li><input type="checkbox">Coleira</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Acessório para pássaros</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li class="ver-todos">Ver Todos</li>
-                            <li><input type="checkbox">Bebedouro</li>
-                            <li><input type="checkbox">Banheira</li>
-                            <li><input type="checkbox">Caneca</li>
-                            <li><input type="checkbox">Comedouro</li>
-                            <li><input type="checkbox">Kit</li>
-                            <li><input type="checkbox">Porta vitamina</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Acessório para roedores</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li class="ver-todos">Ver Todos</li>
-                            <li><input type="checkbox">Bebedouro</li>
-                            <li><input type="checkbox">Comedouro</li>
-                            <li><input type="checkbox">Kit</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Alimento para pássaros</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li class="ver-todos">Ver Todos</li>
-                            <li><input type="checkbox">Sementes in natura</li>
-                            <li><input type="checkbox">Extrusada</li>
-                            <li><input type="checkbox">Farinha</li>
-                            <li><input type="checkbox">Ração</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Alimento para peixes ornamentais</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li><input type="checkbox">Ração</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Alimento para roedores</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li class="ver-todos">Ver Todos</li>
-                            <li><input type="checkbox">Feno</li>
-                            <li><input type="checkbox">Sementes in natura</li>
-                            <li><input type="checkbox">Ração</li>
-                            <li><input type="checkbox">Extrusada</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Higiene para gatos</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li><input type="checkbox">Granulado</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Higiene para roedores</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li class="ver-todos">Ver Todos</li>
-                            <li><input type="checkbox">Pó</li>
-                            <li><input type="checkbox">Granulado</li>
-                            <li><input type="checkbox">Serragem</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Petiscos para cães</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li class="ver-todos">Ver Todos</li>
-                            <li><input type="checkbox">Ossinhos</li>
-                            <li><input type="checkbox">Bifinhos</li>
-                            <li><input type="checkbox">Biscoito</li>
-                            <li><input type="checkbox">Naturais</li>
-                            <li><input type="checkbox">Palitos</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Petiscos para roedores</span>
-                        </span>
-
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li><input type="checkbox">Biscoito</li>
-                        </ul>
-                    </li>
-                    <li class="category-item">
-
-                        <span class="">
-                          <i class="bi bi-bag-fill"></i>
-                          <span class="category">Suplemento para pássaros</span>
-                        </span>
-                      
-                        <ul class="sub-category-list collapsed" style="padding-left: 20px;">
-                            <li class="ver-todos">Ver Todos</li>
-                            <li><input type="checkbox">Areia</li>
-                            <li><input type="checkbox">Líquido</li>
-                            <li><input type="checkbox">Comprimido</li>
-                            <li><input type="checkbox">Farinha</li>
-                            <li><input type="checkbox">Ossos</li>
-                        </ul>
-                    </li>
-                </ul>
-                </div>
-        </div> -->
-        
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div id="itensProdutos" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -391,8 +214,31 @@
 
         </section>
         <!-- Footer-->
-        <footer class="py-5 bg-dark">
-          <div class="container"><p class="m-0 text-center text-white">Copyright © 2024 Rugido Digital | <a class="text-white" href="https://www.instagram.com/rgdo.agencia/">Designed by Rugido Digital</a></p></div>
+        <footer class="py-5 bg-dark" href="./">
+          <div class="container">
+            <div class="text-center" style="text-decoration:none;">
+              <a href="https://www.facebook.com/dm.adesivoss" target="_blank" class="social-icon-footer">
+                <span class="social-ico-icon">
+                    <i class="text-white bi bi-facebook"></i>
+                </span>
+              </a>
+              <a href="https://api.whatsapp.com/message/3W6RV5ZMBSXMO1?autoload=1&app_absent=0" target="_blank" class="social-icon-footer">
+                <span class="social-ico-icon">
+                    <i class="text-white bi bi-whatsapp"></i>
+                </span>
+              </a>
+              <a href="https://www.instagram.com/dmadesivoss/" target="_blank" class="social-icon-footer">
+                <span class="social-ico-icon">
+                    <i class="text-white bi bi-instagram"></i>
+                </span>
+              </a>
+            </div>
+            <p class="m-0 text-center text-white">Copyright © 2024 Rugido Digital | 
+              <a class="text-white" href="https://www.instagram.com/rgdo.agencia/">
+                Designed by Rugido Digital
+              </a>
+            </p>
+          </div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
