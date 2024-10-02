@@ -7099,7 +7099,7 @@ textarea.form-control-lg {
 }
 
 .d-flex {
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
@@ -11281,13 +11281,18 @@ form {
 }
 
 .fullscreen-image {
-  width: 100%; /* Usando vw para representar 100% da largura da tela */ /* Coloquei como % mesmo, para a página deixar de scrollar na horizontal*/
+  width: 100%; /* Usando vw para representar 100% da largurasocial-icon da tela */ /* Coloquei como % mesmo, para a página deixar de scrollar na horizontal*/
   /*height: 100vh;  Usando vh para representar 100% da altura da tela */
   object-fit: cover; /* Garante que a imagem cubra todo o espaço da tela */
   z-index: 1; /* Garante que a imagem fique abaixo do navbar */
+  top: 0px;
+  padding: 1vw; 
+  background-image: url(/assets/assets_img/banner-site.jpg);
+  background-repeat: round;
 }
-
-
+.Flexbox-Between {
+  justify-content: space-between;
+}
 
 /* Modificação de layouts */
 
@@ -11337,7 +11342,7 @@ form {
 
 .social-icon {
   display: inline-flex; /* Usando flexbox */
-  justify-content: center; /* Centralizando horizontalmente */
+  justify-content: space-around; /* Centralizando horizontalmente */
   align-items: center; /* Centralizando verticalmente */
   width: 40px; /* Largura e altura do círculo */
   height: 40px;
@@ -11347,14 +11352,33 @@ form {
   text-decoration: none; /* Remover sublinhado do link */
   margin-right: 10px; /* Espaçamento entre os ícones */
 }
+@media (max-width: 769px) {
+  .social-icon {
+    width: 40px; /* Largura e altura do círculo */
+    height:40px;
+  }
+}
+
 
 .social-ico-icon {
   font-size: 1.2em; /* Tamanho do ícone */
   color: #090db7; /* Cor do ícone */
 }
 
-.navbar-custom{
-  
+.footer-aling{
+  text-align: center;
+  justify-content: space-around;
+}
+
+.social-icon-footer {
+  display: inline-flex; /* Usando flexbox */
+  justify-content: center; /* Centralizando horizontalmente */
+  align-items: center; /* Centralizando verticalmente */
+  width: 40px; /* Largura e altura do círculo */
+  height: 40px;
+  border-radius: 50%; /* Tornar o elemento um círculo */
+  text-decoration: none; /* Remover sublinhado do link */
+  margin-right: 10px; /* Espaçamento entre os ícones */
 }
 
 /* Estilo dos links da navegação */
