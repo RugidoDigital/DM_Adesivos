@@ -12,6 +12,7 @@ loja.eventos = {
         carrinhoDeCompras.carregarCarrinho();
         loja.metodos.atualizarBadge(carrinhoDeCompras.calcularTotalQuantidade());
         loja.metodos.obterProdutosCarrinho();
+        loja.metodos.atualizarPreco();
     }
 }
 
@@ -35,11 +36,31 @@ loja.metodos = {
         .replace(/\${price}/g, preco)
         .replace(/\${marca}/g, item[4])
         .replace(/\${largura}/g, item[5])
-
     
         // Adiciona os itens ao #itensProduto
         $("#itensProduto").append(temp);
         
+    }, 
+
+    atualizarPreco: () => {
+        let string = sessionStorage.getItem('item_data')
+        let item = string.split(",");
+        const valorPorMetro = item[3] //valPrice  Defina o valor por metro aqui
+
+        const metrosSelecionados = parseFloat(document.getElementById('metros').value);
+        const precoTotal = (valorPorMetro * metrosSelecionados);
+        
+        document.getElementById('preco').innerText = `${precoTotal.toFixed(2)}`;//Preço total
+        console.log(metrosSelecionados); // Valor em metros que foi selecionado
+        console.log(precoTotal); // Referênte ao metro
+    },
+
+    // Atualizar o carrinho na interface do usuário
+    atualizarCarrinho: function() {
+        // Aqui você pode implementar a lógica para atualizar a interface do carrinho na sua página HTML
+        // Por exemplo, atualizar a lista de itens, exibir o total, etc.
+        console.log("Carrinho atualizado: ", this.itens);
+        console.log("Carrinho Quantidade : ", this.itens.length);
     }, 
 
     obterItensRelacionado:(itens) =>{
@@ -177,75 +198,95 @@ loja.metodos = {
     
 }
 
-loja.templates = {
-
+loja.templates = {  // R$ \${price}
+                
     item: `
-        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="\${img}" alt="..." /></div>
+        
 
-
-        <div div class="col-md-6">
-            <div class="product-header">
-                <span>Marca: \${marca}</span>
-            </div>
-
-            <div class="product-title">
-                \${name}
-            </div>
-
-            <hr>
-
-            <div class="product-price">
-                <span class="price">
-                <span class="currency">R$</span>
-                <span class="value">\${price}</span>
-                </span>                 
-            </div>
-
-            <div class="product-quantity">
-
-                <p class="quantity-label-item">Quantidade: </p>
-                <div class=" quantity-control me-4">
-                    <button class="btn-cart-control btn-subtract me-2" 
-                    onclick="loja.metodos.btnSubtract()"
-                    >-</button>
-                    <span class="quantity-label me-2" id="inputQuantity">1</span>
-                    <button class="btn-cart-control btn-add"
-                    onclick="loja.metodos.btnAdd()"
-                    >+</button>
+        <div class="card mb-3" style="border: 0;">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img class="card-img-top mb-5 mb-md-0 img-fluid rounded-start" src="\${img}" alt="..." />
                 </div>
+                
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <div class="product-header">
+                            <span>Marca: \${marca}</span>
+                        </div>
+                        <h5 class="card-title">
+                            <div class="product-title">
+                                \${name}
+                            </div>
+                        </h5>
+                        <p class="card-text">
+                            <div class="product-price">
+                                
+                                <span class="price">
+                                    <span class="currency">R$</span>
+                                    <span id="preco" class="value me-3"></span>
+                                </span>
+                                <div class="m-2">
+                                    <select id="metros" onchange="loja.metodos.atualizarPreco(\${id})" class="form-select" aria-label="Default select example">
+                                        <option selected value="1">1.00m x 1.22m</option>
+                                        <option value="1.5">1.50m x 1.22m</option>
+                                        <option value="2">2.00m x 1.22m</option>
+                                        <option value="2.5">2.50m x 1.22m</option>
+                                        <option value="3">3.00m x 1.22m</option>
+                                        <option value="3.5">3.50m x 1.22m</option>
+                                        <option value="4">4.00m x 1.22m</option>
+                                        <option value="4.5">4.50m x 1.22m</option>
+                                        <option value="5">5.00m x 1.22m</option>
+                                        <option value="5.5">5.50m x 1.22m</option>
+                                        <option value="6">6.00m x 1.22m</option>
+                                        <option value="6.5">6.50m x 1.22m</option>
+                                        <option value="7">7.00m x 1.22m</option>
+                                        <option value="7.5">7.50m x 1.22m</option>
+                                        <option value="8">8.00m x 1.22m</option>
+                                        <option value="8.5">8.50m x 1.22m</option>
+                                        <option value="9">9.00m x 1.22m</option>
+                                        <option value="9.5">9.50m x 1.22m</option>
+                                        <option value="10">10.0m x 1.22m</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="product-quantity">
+                                <p class="quantity-label-item">Quantidade: </p>
+                                <div class=" quantity-control me-4">
+                                    <button class="btn-cart-control btn-subtract me-2" 
+                                    onclick="loja.metodos.btnSubtract()"
+                                    >-</button>
+                                    <span class="quantity-label me-2" id="inputQuantity">1</span>
+                                    <button class="btn-cart-control btn-add"
+                                    onclick="loja.metodos.btnAdd()"
+                                    >+</button>
+                                </div>
 
-                <button class="add-to-cart-btn" onclick="loja.metodos.adicionarAoCarrinho(\${id})">
-                Adicionar ao carrinho</button>
+                                <button class="add-to-cart-btn" onclick="loja.metodos.adicionarAoCarrinho(\${id})">
+                                Adicionar ao carrinho</button>
+                            </div>
+                            <div class="product-description">
+                                <p>Sobre este item</p>
+                                <ul>
+                                    <li>Largura : \${largura}</li>
+                                    <li>Impermeável</li>
+                                    <li>Lavável</li>
+                                    <li>Antibacteriano</li>
+                                    <li>Auto colante</li>
+                                </ul>
+                            </div>
+                            <div class="product-actions">
+                                <form class="mb-3" action="index.html">
+                                    <button class="btn btn-outline-dark" type="submit">
+                                        <i class="bi bi-arrow-left-square-fill me-2"></i>
+                                        Continuar Comprando
+                                    </button>
+                                </form> 
+                            </div>
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <div class="product-description">
-                <p>Sobre este item</p>
-                <ul>
-                    <li>Largura : \${largura}</li>
-                    <li>Impermeável</li>
-                    <li>Lavável</li>
-                    <li>Antibacteriano</li>
-                    <li>Auto colante</li>
-                </ul>
-            </div>
-
-            <div class="product-actions">
-                <form class="mb-3" action="index.html">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi bi-arrow-left-square-fill me-2"></i>
-                        Continuar Comprando
-                    </button>
-                </form>
-
-                <form class="d-flex" action="carrinho.html">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-2"></i>
-                        Carrinho
-                    </button>
-                </form>
-
-            </div>
-
         </div>
 
         <!-- Favicon

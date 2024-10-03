@@ -10,6 +10,7 @@
     font-size: 32px;
     font-weight: bold;
     margin: 10px 0;
+    display: flex;
 }
 .product-quantity {
     display: flex;
@@ -23,7 +24,7 @@
 .add-to-cart-btn {
     background-color: #ffcc00;
     border: none;
-    padding: 10px 20px;
+    padding: 7px 14px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px; /* Bordas arredondadas */
