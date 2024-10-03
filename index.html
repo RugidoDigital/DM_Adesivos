@@ -58,14 +58,37 @@
             <i class="bi-cart-fill me-1"></i>
             <span class="badge" id="badgeCartFloat">0</span>
       </button>
-      
+      <!-- <div class="slideshow-container" onchange="showSlides()">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/assets/assets_img/banner-site.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/assets/assets_img/carrinho_vazio.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/assets/assets_img/logo-home.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div> -->
+      <div id="filter"></div>
       <nav class="navbar-custom-top-header header" id="filtro">
         <div class="navbar-left-custom-top-header">
           <ul class="nav-links-custom-top-header">
-            <li><a href="#filtro" onclick="loja.metodos.obterItensPorTag(1)">Madeiras</a></li>
-            <li><a href="#filtro" onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
-            <li><a href="#filtro" onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
-            <li class="d-none d-lg-inline"><a href="#filtro" onclick="loja.metodos.obterItensPorTag(4)">Diversos</a></li>
+            <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(1)">Madeiras</a></li>
+            <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
+            <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
+            <li class="d-none d-lg-inline"><a href="#filter" onclick="loja.metodos.obterItensPorTag(4)">Diversos</a></li>
             <!--<li><a href="#" id="ver_mais_link">Ver mais</a></li>-->
           </ul>
         </div>
@@ -87,7 +110,7 @@
           
           /* Basic styling */
           body {
-            font-family: Arial, sans-serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
           }
 
           .sticky {
@@ -201,6 +224,7 @@
             }
           }
           
+          /* Efeito de transição das letras (hover) */
           figure.effect-milo img {
             width: -webkit-calc(100% + 100px);
             width: calc(100% + 100px);
@@ -210,13 +234,13 @@
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
           }
-
+          /* Opacidade no hover dos cards (hover) */
           figure.effect-milo:hover img {
             opacity: 0.5;
             -webkit-transform: translate3d(0,0,0) scale(1);
             transform: translate3d(0,0,0) scale(1);
           }
-
+          
           figure.effect-milo figcaption {
             margin-top: 70px !important;
             padding: 0 0 0 10px;
@@ -291,12 +315,12 @@
           @media screen and (max-width: 500px) {
             h2 {font-size: 20px;}
             figure.effect-milo .position {
-            position: absolute;
-            font-size: 14px;
-            left: 0;
-            top: 0;
+              position: absolute;
+              font-size: 14px;
+              left: 0;
+              top: 0;
+            }
           }
-        }
         </style>  
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">

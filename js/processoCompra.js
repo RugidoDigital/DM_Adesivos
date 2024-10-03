@@ -96,7 +96,7 @@ loja.metodos = {
     atualizarValorTotal:(value) =>{
         let valorTotal = document.getElementById('total-carrinho');
         if(valorTotal != null){
-            valorTotal.textContent = "R$ " + value.replace('.', ',');
+            valorTotal.textContent = ": R$ " + value.replace('.', ',');
         } else
             valorTotal.textContent = "0,00" + " R$";
     },

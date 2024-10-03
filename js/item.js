@@ -221,7 +221,6 @@ loja.templates = {  // R$ \${price}
                         </h5>
                         <p class="card-text">
                             <div class="product-price">
-                                
                                 <span class="price">
                                     <span class="currency">R$</span>
                                     <span id="preco" class="value me-3"></span>
