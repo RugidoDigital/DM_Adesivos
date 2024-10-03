@@ -17,6 +17,17 @@ window.onscroll = function() {
     }
 };
 
+// window.onscroll = function() {myFunction()};
+// var header = document.getElementById("filtro");
+// var sticky = header.offsetTop;
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
+
 var itemExibidosNoMenu = [];
 
 var loja = {};
@@ -259,13 +270,26 @@ loja.templates = {
 
     item: `
     <div class="col-12 mb-5">
+                        
                         <div class="card h-100">
                             <!-- Product image-->
-
-                            <div class="card-cont">
-                            <img class="card-img-top" src="\${img}" alt="..." />
+                            <div class="card-title grid">
+                                <figure class="effect-milo">
+                                    <img class="card-img-top" src="\${img}" alt="..." />
+                                    <figcaption>
+                                        <div class="product-description">
+                                            <h5>Sobre este item:</h5>
+                                            <ul>
+                                                <li>Largura : \${largura}</li>
+                                                <li>Impermeável</li>
+                                                <li>Lavável</li>
+                                                <li>Antibacteriano</li>
+                                                <li>Auto colante</li>
+                                            </ul>
+                                        </div>
+                                    </figcaption>			
+                                </figure>
                             </div>
-
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
