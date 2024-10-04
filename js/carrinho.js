@@ -65,10 +65,9 @@ var carrinhoDeCompras = {
     calcularTotal: function() {
         let total = 0;
         this.itens.forEach(function(item) {
-            total += (item.preco * item.quantidade);            
+            total += (item.preco * item.quantidade) * item.metragemSelect; // Calcula o valor total
             //total += parseFloat(item.preco.replace(',', '.')) * item.quantidade;
         });
-
         console.log("teste >>>>>>", total.toFixed(2))
         total = total.toFixed(2);
         return total;
@@ -77,6 +76,7 @@ var carrinhoDeCompras = {
     calcularTotalQuantidade: function() {
         let total = this.itens.length;
         return total;
+        
     },
 
     // Atualizar o carrinho na interface do usuário

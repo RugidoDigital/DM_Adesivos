@@ -45,13 +45,15 @@ loja.metodos = {
     atualizarPreco: () => {
         let string = sessionStorage.getItem('item_data')
         let item = string.split(",");
-        const valorPorMetro = item[3] //valPrice  Defina o valor por metro aqui
+        const valorProduto = item[3] // Preço de 1metro do produto chamado da JSON "\${price}"
 
-        const metrosSelecionados = parseFloat(document.getElementById('metros').value);
-        const precoTotal = (valorPorMetro * metrosSelecionados);
+        const metragemSelect = parseFloat(document.getElementById('metros').value);
+        const precoTotal = (valorProduto * metragemSelect);
         
+        // Calculo => precoTotal = (valorProduto * metragemSelect) = passando o resultado na tela
         document.getElementById('preco').innerText = `${precoTotal.toFixed(2)}`;//Preço total
-        console.log(metrosSelecionados); // Valor em metros que foi selecionado
+        console.log(valorProduto);
+        console.log("Metragem selecionada >>>>>", metragemSelect); // Valor em metros que foi selecionado
         console.log(precoTotal); // Referênte ao metro
     },
 
@@ -103,7 +105,7 @@ loja.metodos = {
 
         let quantityLabel = document.getElementById('inputQuantity');
         quantidade = parseInt(quantityLabel.textContent);
-
+        let metragemSelect = parseFloat(document.getElementById('metros').value);
         id = (parseInt(value)) - 1
         var itemParaAdicionar = MENU[id];
         carrinhoDeCompras.adicionarItem({
@@ -111,7 +113,8 @@ loja.metodos = {
         id: itemParaAdicionar.id,
         name: itemParaAdicionar.name,
         preco: itemParaAdicionar.price,
-        quantidade: quantidade
+        quantidade: quantidade,
+        metragemSelect: metragemSelect
         });
 
         carrinhoDeCompras.salvarCarrinho();
@@ -223,11 +226,11 @@ loja.templates = {  // R$ \${price}
                             <div class="product-price">
                                 <span class="price">
                                     <span class="currency">R$</span>
-                                    <span id="preco" class="value me-3"></span>
+                                    <span class="value me-3" id="preco">\${price}</span>
                                 </span>
                                 <div class="m-2">
                                     <select id="metros" onchange="loja.metodos.atualizarPreco(\${id})" class="form-select" aria-label="Default select example">
-                                        <option selected value="1">1.00m x 1.22m</option>
+                                        <option value="1">1.00m x 1.22m</option>
                                         <option value="1.5">1.50m x 1.22m</option>
                                         <option value="2">2.00m x 1.22m</option>
                                         <option value="2.5">2.50m x 1.22m</option>
