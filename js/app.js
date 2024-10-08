@@ -297,7 +297,7 @@ loja.templates = {
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
-                                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price},\${marca},\${largura}'])"
+                                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price}','\${marca}','\${largura}'])"
                                 >Comprar</a></div>
                             </div>
                         </div>
@@ -503,26 +503,6 @@ function getCategoriasSelecionadas() {
     // Retorna o objeto com as categorias e suas subcategorias
     return categoriasSelecionadas;
 }
-
-// Evento de clique no botão "Buscar"
-document.querySelector(".dropdown-btn").addEventListener("click", function() {
-    var dropdownMenu = document.getElementById("dropdown-menu");
-    dropdownMenu.classList.remove("show");
-
-    var categoriasSelecionadas = getCategoriasSelecionadas(); // Obtém as categorias e suas subcategorias selecionadas
-
-    console.log("Categorias selecionadas:", categoriasSelecionadas);
-
-    var itensFiltrados = filtrarBaseDeDados(categoriasSelecionadas); // Filtra a base de dados com base nas subcategorias selecionadas
-    console.log("itens filtrados", itensFiltrados); 
-    
-    if(itensFiltrados.length == 0){
-        loja.metodos.feedBackBuscaFalha();
-    }else{
-        itemExibidosNoMenu = itensFiltrados;
-        loja.metodos.obterItensLoja(true);
-    }
-});
 
 // Função para filtrar a base de dados com base nas categorias e subcategorias selecionadas
 function filtrarBaseDeDados(categoriasSelecionadas) {
