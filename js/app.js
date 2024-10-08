@@ -3,57 +3,29 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const button = document.getElementById("float-button-carrinho");
-
-    button.onclick = function() {
-        window.location.href = "carrinho.html";
-    };
+button.onclick = function() {
+    window.location.href = "carrinho.html";
+};
 
 window.onscroll = function() {
+    var header = document.getElementById("filtro"); // Barra-Fixa da navbar id='fildro'
+    var sticky = header.offsetTop; // Barra-Fixa
+
     var floatButton = document.querySelector('.float-button');
-    if (document.documentElement.scrollTop > 200) { // Exibe o botão após rolar 200px
-        floatButton.style.display = 'block';
+    if (document.documentElement.scrollTop > 90 && window.pageYOffset > sticky) { // Exibe o botão após rolar 200px
+        floatButton.style.display = 'block'; // Botao carrinho float (habilitado)
+        header.classList.add("sticky"); // Navbar fixa (Ativado)
     } else {
-        floatButton.style.display = 'none';
+        floatButton.style.display = 'none'; // Botao carrinho float (desabilitado)
+        header.classList.remove("sticky"); // Navbar fixa (Desativado)
     }
 };
 
-// Carousel na tela inicial
-// function showSlides() {
-//     let slideIndex = 0;
-//     let i;
-//     let slides = document.getElementsByClassName("mySlides");
-//     let dots = document.getElementsByClassName("dot");
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";  
-//     }
-//     slideIndex++;
-//     if (slideIndex > slides.length) {slideIndex = 1}    
-//     for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", "");
-//     }
-//     slides[slideIndex-1].style.display = "block";  
-//     dots[slideIndex-1].className += " active";
-//     setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
 
-// Barra fixa no tela inicial
-window.onscroll = function() {myFunction()};
-var header = document.getElementById("filtro");
-var sticky = header.offsetTop;
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
 
 var itemExibidosNoMenu = [];
-
 var loja = {};
-
 loja.eventos = {
-
     init: () => {
         console.log("Função init está sendo chamada.");
         carrinhoDeCompras.carregarCarrinho();
@@ -402,7 +374,7 @@ document.addEventListener("DOMContentLoaded", function() {
         dropdownMenu.classList.remove("show");
         resetDropdown();
     }
-
+    
     dropdownButton.addEventListener("click", function(event) {
         event.stopPropagation(); 
         dropdownMenu.classList.contains("show") ? hideDropdown() : showDropdown();
