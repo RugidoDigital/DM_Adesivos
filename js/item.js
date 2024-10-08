@@ -20,7 +20,7 @@ loja.metodos = {
 
     obterItemSelecionado:() =>{
         let string = sessionStorage.getItem('item_data')
-        let item = string.split(",");
+        const item = string.split(",");
         console.log("Item passado ", item);
         console.log("Item ", item[0]);
 
@@ -270,7 +270,7 @@ loja.templates = {  // R$ \${price}
                             <div class="product-description">
                                 <p>Sobre este item</p>
                                 <ul>
-                                    <li>Largura : \${largura}</li>
+                                    <li>Largura: \${largura}</li>
                                     <li>Impermeável</li>
                                     <li>Lavável</li>
                                     <li>Antibacteriano</li>
@@ -336,22 +336,36 @@ loja.templates = {  // R$ \${price}
 
     itemRelacionado:`
     <div class="col-12 mb-5">
+                        
         <div class="card h-100">
             <!-- Product image-->
-
-            <div class="card-cont">
-            <img class="card-img-top" src="\${img}" alt="..." />
+            <div class="card-title grid">
+                <figure class="effect-milo">
+                    <img class="card-img-top" src="\${img}" alt="..." />
+                    <figcaption>
+                        <div class="product-description">
+                            <h5>Sobre este item:</h5>
+                            <ul>
+                                <li>Largura : \${largura}</li>
+                                <li>Impermeável</li>
+                                <li>Lavável</li>
+                                <li>Antibacteriano</li>
+                                <li>Auto colante</li>
+                            </ul>
+                        </div>
+                    </figcaption>			
+                </figure>
             </div>
-
             <!-- Product details-->
             <div class="card-body p-4">
                 <div class="text-center">
                     <!-- Product name-->
                     <h5 class="fw-bolder">\${name}</h5>
                     <!-- Product price-->
-                    <h2 class="fw-bolder">R$ \${price}</h2>
-                    
-                    
+                    <span class="price">
+                        <span class="currency">R$</span>
+                        <span class="value">\${price}</span>
+                    </span>
                 </div>
             </div>
             <!-- Product actions-->
