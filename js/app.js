@@ -21,6 +21,53 @@ window.onscroll = function() {
     }
 };
 
+// -------------- CAROUSEL-FUNCTION ---------------- 
+//               Manual e Automático
+let slideIndex = 0;
+let autoSlide;  // Variável para controlar o intervalo automático
+
+// Inicia o carousel
+showSlides();
+
+// Função para alterar para o slide atual, chamado ao clicar no ponto
+function currentSlide(n) {
+  clearTimeout(autoSlide); // Para a troca automática quando o usuário clica manualmente
+  showSlides(slideIndex = n);
+}
+
+// Função principal que mostra os slides
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  // Se nenhum valor for passado para `n`, ele incrementa o slideIndex
+  if (n === undefined) {
+    slideIndex++;
+  }
+
+  // Reseta o índice quando chegar ao último slide
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  if (slideIndex < 1) { slideIndex = slides.length }
+
+  // Esconde todos os slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  // Remove a classe 'active' de todos os pontos
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // Mostra o slide atual e adiciona 'active' ao ponto correspondente
+  slides[slideIndex - 1].style.display = "block";  
+  dots[slideIndex - 1].className += " active";
+
+  // Reinicia o auto slide após 2 segundos
+  autoSlide = setTimeout(showSlides, 2000);  // Troca de imagem a cada 2 segundos
+}
+// ---------------- END-CAROUSEL-FUNCTION ----------------
 
 
 var itemExibidosNoMenu = [];
