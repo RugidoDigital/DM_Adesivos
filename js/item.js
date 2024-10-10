@@ -263,9 +263,10 @@ loja.templates = {  // R$ \${price}
                                     onclick="loja.metodos.btnAdd()"
                                     >+</button>
                                 </div>
-
-                                <button class="add-to-cart-btn" onclick="loja.metodos.adicionarAoCarrinho(\${id})">
-                                Adicionar ao carrinho</button>
+                                <button class="add-to-cart-btn tolltip" 
+                                    onclick="loja.metodos.adicionarAoCarrinho(\${id})">
+                                    <i class="bi-cart-fill me-1"> </i><strong>+</strong>
+                                </button>
                             </div>
                             <div class="product-description">
                                 <p>Sobre este item</p>
