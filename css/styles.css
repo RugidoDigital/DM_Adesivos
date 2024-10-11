@@ -11295,6 +11295,12 @@ form {
   background-image: url(/assets/assets_img/banner-site.jpg);
   background-repeat: round;
 }
+@media (max-width: 417px) {
+  .px-5{
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+} 
 .Flexbox-Between {
   justify-content: space-between;
 }
