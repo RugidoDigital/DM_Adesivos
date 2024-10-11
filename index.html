@@ -42,13 +42,6 @@
                 </span>
               </a>
               <!-- Botão Carrinho -->
-              <!-- <form style="display: flex !important;" action="carrinho.html"> 
-                <button class="custom-button btn-lg" type="submit">
-                  <i class="bi-cart-fill me-1"></i>
-                  <span class="d-none d-lg-inline">Carrinho</span>
-                  <span class="badge" id="badgeCart">0</span>
-                </button>
-              </form> -->
               <form style="display: flex !important;" action="carrinho.html">
                 <button type="submit" class="btn position-relative custom-button m-2">
                     <span class="d-none d-lg-inline">Carrinho</span> <!-- Oculta o texto em dispositivos móveis -->
@@ -71,18 +64,16 @@
 
     <!-- CAROUSEL -->
     <!-- onchange="showSlides()" -->
+    <!-- <div class="numbertext">3 / 3</div> -->
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="/assets/assets_img/banner-site.jpg" class="Image-screen">
+        <img src="/assets/carousel_img/site-dm-1.jpg"  width="100" class="Image-screen">
       </div>
       <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="/assets/assets_img/banner-site.jpg" class="Image-screen">
+        <img src="/assets/carousel_img/site-dm2.jpg" width="100" class="Image-screen">
       </div>
       <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="/assets/assets_img/banner-site.jpg" class="Image-screen">
+        <img src="/assets/carousel_img/site-dm3.jpg" width="100" class="Image-screen">
       </div>
       <!-- CAROUSEL-BUTTONS -->
       <div class="text" style="text-align:center">
@@ -301,8 +292,9 @@
       }
 
       .Image-screen{
-        width: 100%;
-        height: 15rem;
+        width: 100vw;
+        max-width: 100vw;
+        height: 10rem;
       }
     </style>  
     <section class="py-5">
