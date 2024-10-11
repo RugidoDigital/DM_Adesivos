@@ -12,7 +12,7 @@ window.onscroll = function() {
     var sticky = header.offsetTop; // Barra-Fixa
 
     var floatButton = document.querySelector('.float-button');
-    if (document.documentElement.scrollTop > 90 && window.pageYOffset > sticky) { // Exibe o botão após rolar 200px
+    if (document.documentElement.scrollTop > 260 && window.pageYOffset > sticky) { // Exibe o botão após rolar 200px
         floatButton.style.display = 'block'; // Botao carrinho float (habilitado)
         header.classList.add("sticky"); // Navbar fixa (Ativado)
     } else {
@@ -65,7 +65,7 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 
   // Reinicia o auto slide após 2 segundos
-  autoSlide = setTimeout(showSlides, 2000);  // Troca de imagem a cada 2 segundos
+  autoSlide = setTimeout(showSlides, 3000);  // Troca de imagem a cada 2 segundos
 }
 // ---------------- END-CAROUSEL-FUNCTION ----------------
 
