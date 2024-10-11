@@ -151,7 +151,7 @@ loja.templates = {
                     <!-- Metragem do produto -->
                     <h2>Metragem: \${largura}m² x 1,22m²</h2>
                     <!-- Preço do produto -->
-                    <p class=" fw-bolder">
+                    <p class="fw-bolder">
                         <h5>
                             <span class="price">
                                 <span class="currency">R$</span>

@@ -308,46 +308,46 @@ function closeOtherSubMenus(currentSubMenu) {
 loja.templates = {
 
     item: `
-    <div class="col-12 mb-5">
-                        
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <div class="card-title grid">
-                                <figure class="effect-milo">
-                                    <img class="card-img-top" src="\${img}" alt="..." />
-                                    <figcaption>
-                                        <div class="product-description">
-                                            <h5>Sobre este item:</h5>
-                                            <ul>
-                                                <li>Largura : \${largura}</li>
-                                                <li>Impermeável</li>
-                                                <li>Lavável</li>
-                                                <li>Antibacteriano</li>
-                                                <li>Auto colante</li>
-                                            </ul>
-                                        </div>
-                                    </figcaption>			
-                                </figure>
+        
+        <div class="col-12 mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <div class="card-title grid">
+                    <figure class="effect-milo">
+                        <img class="card-img-top" src="\${img}" alt="..." />
+                        <figcaption>
+                            <div class="product-description">
+                                <h5>Sobre este item:</h5>
+                                <ul>
+                                    <li>Largura : \${largura}</li>
+                                    <li>Impermeável</li>
+                                    <li>Lavável</li>
+                                    <li>Antibacteriano</li>
+                                    <li>Auto colante</li>
+                                </ul>
                             </div>
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">\${name}</h5>
-                                    <!-- Product price-->
-                                    <span class="price">
-                                        <span class="currency">R$</span>
-                                        <span class="value">\${price-show}</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center">
-                                <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price}','\${marca}','\${largura}'])"
-                                >Comprar</a></div>
-                            </div>
-                        </div>
+                        </figcaption>			
+                    </figure>
+                </div>
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">\${name}</h5>
+                        <!-- Product price-->
+                        <span class="price">
+                            <span class="currency">R$</span>
+                            <span class="value">\${price-show}</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                    <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price}','\${marca}','\${largura}'])"
+                    >Comprar</a></div>
+                </div>
+            </div>
         </div>
     `,
 
