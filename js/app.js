@@ -12,7 +12,7 @@ window.onscroll = function() {
     var sticky = header.offsetTop; // Barra-Fixa
 
     var floatButton = document.querySelector('.float-button');
-    if (document.documentElement.scrollTop > 100 && window.pageYOffset > sticky) { // Exibe o botão após rolar 200px
+    if (document.documentElement.scrollTop > 165 && window.pageYOffset > sticky) { // Exibe o botão após rolar 200px
         floatButton.style.display = 'block'; // Botao carrinho float (habilitado)
         header.classList.add("sticky"); // Navbar fixa (Ativado)
     } else {
