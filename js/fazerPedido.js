@@ -31,7 +31,9 @@ loja.metodos = {
         for (var i = 0; i < itens.length; i++) {
             let preco = parseFloat(itens[i].preco).toFixed(2).replace('.', ',');
             let metragem = parseFloat(itens[i].metragemSelect); // Metragem selecionada
-            let valorMetragem = (parseFloat(itens[i].preco) * metragem).toFixed(2).replace('.', ','); // Valor do produto com base na metragem
+            let quantItem = parseInt(itens[i].quantidade); // Quantidade selecionada
+            let valorMetragem = (parseFloat(itens[i].preco) * metragem * quantItem).toFixed(2).replace('.', ','); // Valor do produto com base na metragem
+            console.log("Valor Unitário: ", valorMetragem); // Tá escrito valorMetragem, mas também faz a function de calc. a quantidade e apresentar o valor total 
             let temp = loja.templates.itemResumo
                 .replace(/\${img}/g, itens[i].img)
                 .replace(/\${name}/g, itens[i].name)
@@ -160,7 +162,7 @@ loja.metodos = {
            
             $.each(carrinhoDeCompras.itens, (i, e) => {
                 // Calculando o preço total com a metragem selecionada
-                let precoTotal = (parseFloat(e.preco) * parseFloat(e.metragemSelect)).toFixed(2).replace('.', ',');
+                let precoTotal = (parseFloat(e.preco) * parseFloat(e.metragemSelect) * parseInt(e.quantidade)).toFixed(2).replace('.', ',');
     
                 // Concatena as informações de cada item no formato correto
                 itens += `*${e.quantidade}x* ${e.name} (Metragem: ${e.metragemSelect}m) - *R$ ${precoTotal}* \n`;
@@ -187,49 +189,6 @@ loja.metodos = {
             loja.metodos.mensagem("Carrinho vazio ou endereço não definido.");
         }
     },
-
-    // finalizarPedido: () => {
-    //     if (carrinhoDeCompras.itens.length > 0 && MEU_ENDERECO != null) {
-    //         var texto = 'Olá! Vim pelo catálogo e gostaria de fazer meu pedido:';
-    //         texto += `\n*Itens do pedido:*\n\n\${itens}`;
-    //         texto += '\n*Endereço de entrega:*';
-    //         texto += `\n${MEU_ENDERECO.endereco} - ${MEU_ENDERECO.uf}`;
-
-    //         texto += `\nCliente: ${MEU_ENDERECO.nome}`;
-    //         //texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}*`;
-            
-    //         console.log("passou do texto");
-    //         console.log("texto >>>>>>>", texto);
-
-    //         var itens = '';
-
-    //         $.each(carrinhoDeCompras.itens, (i, e) => {
-
-    //             console.log("Está rodando");
-    //             //itens += `*${e.quantidade}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.', ',')} \n`;
-    //             itens += `*${e.quantidade}x* ${e.name} \n`;
-
-
-    //             // último item
-    //             if ((i + 1) == carrinhoDeCompras.itens.length) {
-
-    //                 texto = texto.replace(/\${itens}/g, itens);
-
-    //                 // converte a URL
-    //                 let encode = encodeURI(texto);
-    //                 let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
-
-    //                 $("#btnEtapaResumo").attr('href', URL);
-
-    //                 console.log("final >>>>>>>", URL);
-
-    //             }
-
-    //         })
-
-    //     }
-
-    // },
 
     mensagem: (texto, cor = 'red', tempo = 3500) => {
 
