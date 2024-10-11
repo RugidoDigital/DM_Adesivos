@@ -43,18 +43,28 @@ loja.metodos = {
     }, 
 
     atualizarPreco: () => {
-        let string = sessionStorage.getItem('item_data')
-        let item = string.split(",");
-        const valorProduto = item[3] // Preço de 1metro do produto chamado da JSON "\${price}"
+    // Obtendo dados do produto do sessionStorage
+    let string = sessionStorage.getItem('item_data');
+    let item = string.split(",");
+    const valorProduto = parseFloat(item[3]); // Preço de 1 metro do produto
 
-        const metragemSelect = parseFloat(document.getElementById('metros').value);
-        const precoTotal = (valorProduto * metragemSelect);
-        
-        // Calculo => precoTotal = (valorProduto * metragemSelect) = passando o resultado na tela
-        document.getElementById('preco').innerText = `${precoTotal.toFixed(2)}`;//Preço total
-        console.log(valorProduto);
-        console.log("Metragem selecionada >>>>>", metragemSelect); // Valor em metros que foi selecionado
-        console.log(precoTotal); // Referênte ao metro
+    // Obtendo a metragem selecionada pelo usuário
+    const metragemSelect = parseFloat(document.getElementById('metros').value);
+
+    // Obtendo a quantidade selecionada pelo usuário
+    const quantidade = parseInt(document.getElementById('inputQuantity').innerText); // Certifique-se de que este campo existe no HTML
+
+    // Calculando o preço total com base na metragem e na quantidade
+    const precoTotal = (valorProduto * metragemSelect * quantidade);
+
+    // Atualizando o valor na tela
+    document.getElementById('preco').innerText = `${precoTotal.toFixed(2)}`; // Preço total formatado
+
+    // Logs para depuração
+    console.log("Valor do produto (por metro):", valorProduto);
+    console.log("Metragem selecionada >>>>>", metragemSelect); // Valor em metros
+    console.log("Quantidade selecionada >>>>>", quantidade); // Quantidade de itens
+    console.log("Preço total >>>>>", precoTotal); // Preço total calculado
     },
 
     // Atualizar o carrinho na interface do usuário
@@ -109,12 +119,13 @@ loja.metodos = {
         id = (parseInt(value)) - 1
         var itemParaAdicionar = MENU[id];
         carrinhoDeCompras.adicionarItem({
-        img: itemParaAdicionar.img,
-        id: itemParaAdicionar.id,
-        name: itemParaAdicionar.name,
-        preco: itemParaAdicionar.price,
-        quantidade: quantidade,
-        metragemSelect: metragemSelect
+            img: itemParaAdicionar.img,
+            id: itemParaAdicionar.id,
+            name: itemParaAdicionar.name,
+            preco: itemParaAdicionar.price,
+            quantidade: quantidade,
+            metragemSelect: metragemSelect,
+            valUnit: metragemSelect
         });
 
         carrinhoDeCompras.salvarCarrinho();
@@ -254,7 +265,7 @@ loja.templates = {  // R$ \${price}
                             </div>
                             <div class="product-quantity">
                                 <p class="quantity-label-item">Quantidade: </p>
-                                <div class=" quantity-control me-4">
+                                <div class=" quantity-control me-4" onclick="loja.metodos.atualizarPreco(\${id})">
                                     <button class="btn-cart-control btn-subtract me-2" 
                                     onclick="loja.metodos.btnSubtract()"
                                     >-</button>
