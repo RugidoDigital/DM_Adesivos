@@ -40,8 +40,9 @@ loja.metodos = {
         for (var i = 0; i < itens.length; i++) {
             let preco = parseFloat(itens[i].preco).toFixed(2).replace('.', ',');
             let metragem = parseFloat(itens[i].metragemSelect); // Metragem selecionada
-            let valorMetragem = (parseFloat(itens[i].preco) * metragem).toFixed(2).replace('.', ','); // Valor do produto com base na metragem
-    
+            let quantItem = parseInt(itens[i].quantidade); // Quantidade selecionada
+            let valorMetragem = (parseFloat(itens[i].preco) * metragem * quantItem).toFixed(2).replace('.', ','); // Valor do produto com base na metragem
+            console.log("Valor Unitário: ", valorMetragem); // Tá escrito valorMetragem, mas também faz a function de calc. a quantidade e apresentar o valor total 
             let temp = loja.templates.itemCarrinho
                 .replace(/\${img}/g, itens[i].img)
                 .replace(/\${name}/g, itens[i].name)
@@ -136,9 +137,9 @@ loja.templates = {
                 <div class="meta">
                     <div class="photo" style="background-image:url(\${img})">
                         <!-- Controle de quantidade -->
-                        <div class="quantity-control d-flex justify-content-center align-items-center" style="width: 100px">
+                        <div onclick="loja.metodos.obterProdutosCarrinho()" class="quantity-control d-flex justify-content-center align-items-center" style="width: 100px">
                             <button class="btn-cart-control btn-subtract" onclick="loja.metodos.btnSubtract(\${id})">-</button>
-                            <span class="quantity-label mx-2" id="quantity-label-\${id}">\${qtd}</span>
+                            <span class="quantity-label mx-2" id="quantity-label-\${id}"  >\${qtd}</span>
                             <button class="btn-cart-control btn-add" onclick="loja.metodos.btnAdd(\${id})">+</button>
                         </div>
                     </div>
@@ -154,7 +155,7 @@ loja.templates = {
                         <h5>
                             <span class="price">
                                 <span class="currency">R$</span>
-                                <span class="value me-3" id="preco">  \${valorMetragem}</span>
+                                <span class="value me-3" id="preco"> \${valorMetragem}</span>
                             </span>
                         </h5>
                     </p>
