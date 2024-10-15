@@ -11,7 +11,7 @@ loja.eventos = {
         loja.metodos.obterItemSelecionado();
         carrinhoDeCompras.carregarCarrinho();
         loja.metodos.atualizarBadge(carrinhoDeCompras.calcularTotalQuantidade());
-        loja.metodos.obterProdutosCarrinho();
+        // loja.metodos.obterProdutosCarrinho();
         loja.metodos.atualizarPreco();
     }
 }
@@ -144,19 +144,33 @@ loja.metodos = {
     obterProdutosCarrinho:() =>{
 
         carrinhoDeCompras.carregarCarrinho();
-        let itens = [];
+        let itens = carrinhoDeCompras.itens || [];
         itens = carrinhoDeCompras.itens;
+
         console.log("Elementos Relacionados ",itens);
 
-        for (var i = 0; i < itens.length; i++) {
-            let temp = loja.templates.itemCarrinho
-                .replace(/\${img}/g, itens[i].img)
-                .replace(/\${name}/g, itens[i].name)
-                .replace(/\${id}/g, itens[i].id)
+        if (loja.templates && loja.templates.item) { // Verifica se o template está definido
+            for (var i = 0; i < itens.length; i++) {
+                // Certifique-se de que todas as propriedades existem
+                let img = itens[i].img || '';  // Valor padrão vazio se não existir
+                let name = itens[i].name || 'Sem nome'; // Nome padrão se não existir
+                let id = itens[i].id || ''; // Valor padrão vazio se não existir
+
+                // Gera o HTML substituindo os valores
+                let temp = loja.templates.item
+                    .replace(/\${img}/g, itens[i].img)
+                    .replace(/\${name}/g, itens[i].name)
+                    .replace(/\${id}/g, itens[i].id)
     
-            // Adiciona os itens ao #itensProdutos
-            console.log("temp ",temp);
-            $("#itensProdutosCarrinho").append(temp);
+                // Adiciona os itens ao #itensProdutos
+                console.log("temp ",temp);
+                $("#itensProdutosCarrinho").append(temp);
+                // Adiciona os itens ao #itensProdutos
+                console.log("temp ", temp);
+                $("#itensProdutosCarrinho").append(temp);
+            }
+        } else {
+            console.error("Template 'itemCarrinho' não encontrado em 'loja.templates'");
         }
     }, 
 

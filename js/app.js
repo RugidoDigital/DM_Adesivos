@@ -421,22 +421,25 @@ document.addEventListener("DOMContentLoaded", function() {
         dropdownMenu.classList.remove("show");
         resetDropdown();
     }
-    
-    dropdownButton.addEventListener("click", function(event) {
-        event.stopPropagation(); 
-        dropdownMenu.classList.contains("show") ? hideDropdown() : showDropdown();
-        if (!dropdownMenu.classList.contains("show")) { // Salvando o estado dos checkboxes ao fechar o dropdown
-            saveCheckboxStates();
-        } else { // Restaurando o estado dos checkboxes ao abrir o dropdown
-            restoreCheckboxStates();
-        }
+    document.addEventListener("DOMContentLoaded", function() {
+        dropdownButton.addEventListener("click", function(event) {
+            event.stopPropagation(); 
+            dropdownMenu.classList.contains("show") ? hideDropdown() : showDropdown();
+            if (!dropdownMenu.classList.contains("show")) { // Salvando o estado dos checkboxes ao fechar o dropdown
+                saveCheckboxStates();
+            } else { // Restaurando o estado dos checkboxes ao abrir o dropdown
+                restoreCheckboxStates();
+            }
+        });
     });
 
     // Evento de clique fora do dropdown para fechá-lo
-    document.addEventListener("click", function(event) {
-        if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
-            hideDropdown();
-        }
+    document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("click", function(event) {
+            if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
+                hideDropdown();
+            }
+        });
     });
 
 
