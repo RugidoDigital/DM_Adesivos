@@ -67,13 +67,13 @@
     <!-- <div class="numbertext">3 / 3</div> -->
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <img src="/assets/carousel_img/site-dm-1.jpg"  width="100" class="Image-screen img-fluid">
+        <img src="/assets/carousel_img/site-dm-1.jpg"  width="100" class="carousel-image img-fluid">
       </div>
       <div class="mySlides fade">
-        <img src="/assets/carousel_img/site-dm2.jpg" width="100" class="Image-screen img-fluid">
+        <img src="/assets/carousel_img/site-dm2.jpg" width="100" class="carousel-image img-fluid">
       </div>
       <div class="mySlides fade">
-        <img src="/assets/carousel_img/site-dm3.jpg" width="100" class="Image-screen img-fluid">
+        <img src="/assets/carousel_img/site-dm3.jpg" width="100" class="carousel-image img-fluid">
       </div>
       <!-- CAROUSEL-BUTTONS -->
       <div class="text" style="text-align:center">
@@ -287,11 +287,13 @@
         .prev, .next,.text {font-size: 11px}
       }
 
-      .Image-screen{
-        width: 100%;
-        max-width: 200%;
-        height: auto;
+      .carousel-image {
+        width: 100%; /* A imagem preencherá a largura do contêiner */
+        height: 300px; /* Altura fixa ou ajuste conforme necessário */
+        object-fit: cover; /* Corta as bordas da imagem e mantém o aspecto */
+        overflow: hidden; /* Esconde o excesso da imagem fora das bordas */
       }
+
     </style>  
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
