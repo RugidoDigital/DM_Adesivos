@@ -2,6 +2,16 @@ document.addEventListener("DOMContentLoaded", function() {
     loja.eventos.init();
 });
 
+window.onscroll = function() {
+
+    var floatButton = document.querySelector('.float-button');
+    if (document.documentElement.scrollTop > 100) { // Exibe o botão após rolar 200px
+        floatButton.style.display = 'block'; // Botao carrinho float (habilitado)
+    } else {
+        floatButton.style.display = 'none'; // Botao carrinho float (desabilitado)
+    }
+};
+
 var loja = {};
 
 loja.eventos = {
