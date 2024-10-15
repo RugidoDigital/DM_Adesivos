@@ -10,7 +10,7 @@
     font-size: 32px;
     font-weight: bold;
     margin: 10px 0;
-    display: flex;
+    /* display: flex; */
 }
 .product-quantity {
     display: flex;
@@ -40,7 +40,7 @@
     margin-right: 1em;
 }
 .product-description {
-    margin-top: 20px;
+    margin-top: -20px;
 }
 .product-actions {
     display: flex;

@@ -11308,6 +11308,12 @@ form {
     padding-right: 0rem !important;
     padding-left: 0rem !important;
   }
+}
+@media (max-width: 344px) {
+  .ullscreen-image{
+    text-align: center;
+    justify-content: center;
+  }
 } 
 .Flexbox-Between {
   justify-content: space-between;
@@ -11534,7 +11540,7 @@ figure.effect-milo:hover figcaption {
   overflow: hidden;
   margin: 0;
   width: 100%;
-  height: 290px;
+  height: 250px;
   background: #0f1c27;
   text-align: center;
   cursor: pointer;
@@ -11738,7 +11744,7 @@ figure.effect-milo:hover figcaption {
   left: 0%;
 }
 @media (min-width: 640px) {
-  .blog-card {
+  .overflow-auto .blog-card {
     flex-direction: row;
     max-width: 700px;
  }

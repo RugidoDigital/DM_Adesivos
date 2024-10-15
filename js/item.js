@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     loja.eventos.init();
 });
 
+const button = document.getElementById("float-button-carrinho");
+button.onclick = function() {
+    window.location.href = "carrinho.html";
+};
+
 window.onscroll = function() {
 
     var floatButton = document.querySelector('.float-button');
@@ -148,7 +153,9 @@ loja.metodos = {
 
     atualizarBadge:(value) =>{
         var badgeSpan = document.getElementById('badgeCart');
+        var badgeSpanFloat = document.getElementById('badgeCartFloat');
         badgeSpan.textContent = value;
+        badgeSpanFloat.textContent = value;
     },
 
     obterProdutosCarrinho:() =>{
@@ -246,11 +253,14 @@ loja.templates = {  // R$ \${price}
                 <div class="col-md-6">
                     <img class="card-img-top mb-5 mb-md-0 img-fluid rounded-start" src="\${img}" alt="..." />
                 </div>
-                
                 <div class="col-md-6">
                     <div class="card-body">
                         <div class="product-header">
                             <span>Marca: \${marca}</span>
+                            <button class="add-to-cart-btn tolltip m-2" 
+                                onclick="loja.metodos.adicionarAoCarrinho(\${id})">
+                                <div> Adicionar ao carrinho +<i class="bi-cart-fill me-1"></i></div> 
+                            </button>
                         </div>
                         <h5 class="card-title">
                             <div class="product-title">
@@ -287,9 +297,9 @@ loja.templates = {  // R$ \${price}
                                     </select>
                                 </div>
                             </div>
-                            <div class="product-quantity">
+                            <div class="product-quantity p-2">
                                 <p class="quantity-label-item">Quantidade: </p>
-                                <div class=" quantity-control me-4" onclick="loja.metodos.atualizarPreco(\${id})">
+                                <div class=" quantity-control me-2" onclick="loja.metodos.atualizarPreco(\${id})">
                                     <button class="btn-cart-control btn-subtract me-2" 
                                     onclick="loja.metodos.btnSubtract()"
                                     >-</button>
@@ -298,10 +308,6 @@ loja.templates = {  // R$ \${price}
                                     onclick="loja.metodos.btnAdd()"
                                     >+</button>
                                 </div>
-                                <button class="add-to-cart-btn tolltip" 
-                                    onclick="loja.metodos.adicionarAoCarrinho(\${id})">
-                                    <i class="bi-cart-fill me-1"> </i><strong>+</strong>
-                                </button>
                             </div>
                             <div class="product-description">
                                 <p>Sobre este item</p>
@@ -351,10 +357,10 @@ loja.templates = {  // R$ \${price}
                 </figure>
             </div>
             <!-- Product details-->
-            <div class="card-body p-4">
+            <div class="card-body p-2">
                 <div class="text-center">
                     <!-- Product name-->
-                    <h5 class="fw-bolder">\${name}</h5>
+                    <h6>\${name}</h6>
                     <!-- Product price-->
                     <span class="price">
                         <span class="currency">R$</span>
@@ -363,7 +369,7 @@ loja.templates = {  // R$ \${price}
                 </div>
             </div>
             <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                 <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}',parseFloat('\${price}'.replace(',','.')),'\${marca}','\${largura}'])"
                 >Comprar</a></div>

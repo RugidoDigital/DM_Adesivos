@@ -330,10 +330,10 @@ loja.templates = {
                     </figure>
                 </div>
                 <!-- Product details-->
-                <div class="card-body p-4">
+                <div class="card-body p-2">
                     <div class="text-center">
                         <!-- Product name-->
-                        <h5 class="fw-bolder">\${name}</h5>
+                        <h6>\${name}</h6>
                         <!-- Product price-->
                         <span class="price">
                             <span class="currency">R$</span>
@@ -342,7 +342,7 @@ loja.templates = {
                     </div>
                 </div>
                 <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
                     <div class="text-center">
                     <a class="custom-button mt-auto" href="item.html"onclick="loja.metodos.verPaginaDoItem(['\${img}','\${name}','\${id}','\${price}','\${marca}','\${largura}'])"
                     >Comprar</a></div>
