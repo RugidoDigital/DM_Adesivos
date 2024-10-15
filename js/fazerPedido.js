@@ -7,7 +7,17 @@ var loja = {};
 var MEU_ENDERECO = null;
 
 var CELULAR_EMPRESA = '5592992577657'
-                       
+
+// Adição de (xx) e - automático
+const tel = document.getElementById('txtTelefone') // Seletor do campo de telefone
+tel.addEventListener('keypress', (e) => mascaraTelefone(e.target.value)) // Dispara quando digitado no campo
+tel.addEventListener('change', (e) => mascaraTelefone(e.target.value)) // Dispara quando autocompletado o campo
+const mascaraTelefone = (valor) => {
+    valor = valor.replace(/\D/g, "")
+    valor = valor.replace(/^(\d{2})(\d{0})/g, "($1) $2")
+    valor = valor.replace(/(\d{5})(\d{0})/, "$1-$2")
+    tel.value = valor // Insere o(s) valor(es) no campo
+}
 
 loja.eventos = {
 
@@ -73,6 +83,7 @@ loja.metodos = {
             $("#txtTelefone").focus();
             return;
         }
+        
 
         // if (empresa.length <= 0) {
         //     loja.metodos.mensagem('Informe o Nome da Empresa, por favor.');
