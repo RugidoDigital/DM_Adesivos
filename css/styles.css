@@ -11302,12 +11302,14 @@ form {
   padding: 1vw; 
   background-image: url(/assets/assets_img/banner-site.jpg);
   background-repeat: round;
-  text-align: center;
 }
 @media (max-width: 417px) {
   .px-5{
     padding-right: 0rem !important;
     padding-left: 0rem !important;
+  }
+  .fullscreen-image {
+    text-align: center;
   }
 }
 .Flexbox-Between {
