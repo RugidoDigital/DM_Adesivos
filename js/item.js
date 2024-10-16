@@ -249,6 +249,14 @@ loja.templates = {  // R$ \${price}
         
 
         <div class="card mb-3" style="border: 0;">
+        <div class="product-actions">
+                                <form class="mb-3" action="index.html">
+                                    <button class="btn btn-outline-dark" type="submit">
+                                        <i class="bi bi-arrow-left-square-fill me-2"></i>
+                                        Continuar Comprando
+                                    </button>
+                                </form> 
+                            </div>
             <div class="row g-0">
                 <div class="col-md-6">
                     <img class="card-img-top mb-5 mb-md-0 img-fluid rounded-start" src="\${img}" alt="..." />
@@ -257,10 +265,6 @@ loja.templates = {  // R$ \${price}
                     <div class="card-body">
                         <div class="product-header">
                             <span>Marca: \${marca}</span>
-                            <button class="add-to-cart-btn tolltip m-2" 
-                                onclick="loja.metodos.adicionarAoCarrinho(\${id})">
-                                <div> Adicionar ao carrinho +<i class="bi-cart-fill me-1"></i></div> 
-                            </button>
                         </div>
                         <h5 class="card-title">
                             <div class="product-title">
@@ -319,14 +323,10 @@ loja.templates = {  // R$ \${price}
                                     <li>Auto colante</li>
                                 </ul>
                             </div>
-                            <div class="product-actions">
-                                <form class="mb-3" action="index.html">
-                                    <button class="btn btn-outline-dark" type="submit">
-                                        <i class="bi bi-arrow-left-square-fill me-2"></i>
-                                        Continuar Comprando
-                                    </button>
-                                </form> 
-                            </div>
+                            <button class="add-to-cart-btn tolltip m-2" 
+                                onclick="loja.metodos.adicionarAoCarrinho(\${id})">
+                                <div> Adicionar ao carrinho +<i class="bi-cart-fill me-1"></i></div> 
+                            </button>
                         </p>
                     </div>
                 </div>
