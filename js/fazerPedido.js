@@ -27,6 +27,39 @@ loja.eventos = {
     }
 }
 
+// Função para salvar as informações do cliente no localStorage
+function salvarInformacoesCliente() {
+    const cliente = {
+        nome: document.getElementById('txtNome').value,
+        uf: document.getElementById('ddlUf').value,
+        telefone: document.getElementById('txtTelefone').value,
+        endereco: document.getElementById('txtEndereco').value
+    };
+
+    // Salva os dados do cliente no localStorage
+    localStorage.setItem('cliente', JSON.stringify(cliente));
+    alert("Informações salvas com sucesso!");
+}
+
+// Função para preencher automaticamente o formulário com os dados do cliente
+function preencherFormulario() {
+    const clienteInfo = localStorage.getItem('cliente');
+
+    if (clienteInfo) {
+        const cliente = JSON.parse(clienteInfo);
+
+        // Preencher os campos do formulário com os dados salvos
+        document.getElementById('txtNome').value = cliente.nome || '';
+        document.getElementById('ddlUf').value = cliente.uf || '';
+        document.getElementById('txtTelefone').value = cliente.telefone || '';
+        document.getElementById('txtEndereco').value = cliente.endereco || '';
+
+        alert(`Bem-vindo de volta, ${cliente.nome}! Seus dados foram preenchidos.`);
+    } else {
+        alert("Nenhum dado de cliente foi encontrado.");
+    }
+}
+
 loja.metodos = {
 
     obterProdutosCarrinho:() =>{

@@ -62,7 +62,7 @@
       <div class="container-mensagens" id="container-mensagens"></div>
       <!-- test section items section-->
        <div class="container-finalizar-compra">
-        <h2 class="fw-bolder mb-4">Endereço de entrega:</h2> 
+        <h2 class="fw-bolder mb-4">Endereço de entrega: <button class="btn btn-secondary" type="button" onclick="preencherFormulario()">Já sou cliente</button></h2> 
         <!--<div class="input-wrapper">
           <label for="cep">CEP:</label>
           <input type="text" id="txtCEP" name="cep" placeholder="Digite seu CEP" required>
@@ -145,6 +145,14 @@
               <option value="SE">SE</option>
               <option value="TO">TO</option>-->
             </select>
+          </div>
+          <div class="mb-3">
+            <label for="InformacoesCliente" class="form-label">Salvar informações:</label>
+            <div>
+                <button id="InformacoesCliente" name="InformacoesCliente" class="btn btn-outline-dark" type="button" onclick="salvarInformacoesCliente()">
+                    Salvar <i class="bi bi-check2-circle"></i>
+                </button>
+            </div>
           </div>
         </form>
       </div>
