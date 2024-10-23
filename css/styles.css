@@ -653,8 +653,25 @@ progress {
   margin-right: auto;
   margin-left: auto;
 }
-
-@media (min-width: 576px) {
+@media (max-width: 768px) {
+  #itensProdutos {
+    padding-right: 7.8rem;
+    padding-left: 7.8rem;
+  }
+}
+@media (max-width: 576px) {
+  #itensProdutos {
+    padding-right: 7rem;
+    padding-left: 7rem;
+  }
+}
+@media (max-width: 472px) {
+  #itensProdutos {
+    padding-right: 9.8vw;
+    padding-left: 9.8vw;
+  }
+}
+@media (min-width: 577px) {
   .container-sm, .container {
     max-width: 540px;
   }
@@ -11305,8 +11322,8 @@ form {
 }
 @media (max-width: 417px) {
   .px-5{
-    padding-right: 0rem !important;
-    padding-left: 0rem !important;
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
   }
   .fullscreen-image {
     text-align: center;
@@ -11511,8 +11528,7 @@ figure.effect-milo:hover img {
 }
 
 figure.effect-milo figcaption {
-  margin-top: 70px !important;
-  padding: 0 0 0 10px;
+  margin-top: 30px !important;
   width: 100%;	
   font-style: italic;
   border-left: 2px solid #fff;
@@ -11537,7 +11553,7 @@ figure.effect-milo:hover figcaption {
   overflow: hidden;
   margin: 0;
   width: 100%;
-  height: 250px;
+  height: 180px;
   background: #0f1c27;
   text-align: center;
   cursor: pointer;
