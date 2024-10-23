@@ -187,6 +187,10 @@ loja.metodos = {
             break;
 
             case 4:
+                categorias = ['TELADO'];
+            break;
+
+            case 5:
                 categorias = ['DIVERSOS'];
             break;
 

@@ -85,21 +85,39 @@
     <section id="filter"></section>
     <nav class="navbar-custom-top-header header" id="filtro">
       <div class="navbar-left-custom-top-header">
-        <ul class="nav-links-custom-top-header">
+        <ul class="nav-links-custom-top-header d-none d-lg-flex">
           <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(1)">Madeiras</a></li>
           <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
           <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
-          <li class="d-none d-lg-inline"><a href="#filter" onclick="loja.metodos.obterItensPorTag(4)">Diversos</a></li>
-          <!--<li><a href="#" id="ver_mais_link">Ver mais</a></li>-->
+          <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(4)">Telados</a></li>
+          <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(5)">Diversos</a></li>
         </ul>
+  
+        <!-- Menu DropDown para telas menores -->
+        <div class="dropdown d-lg-none">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorias
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(1)">Madeiras</a></li>
+            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
+            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
+            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(4)">Telados</a></li>
+            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(5)">Diversos</a></li>
+          </ul>
+        </div>
       </div>
+  
       <div class="navbar-right-custom-top-header">
         <div class="search-form-custom-top-header">
-          <input id="inputPesquisa" type="text" placeholder="  Buscar..." style="border-radius: 20px; border: 2px solid #090db7;">
-          <button class="btn btn-success my-2 my-sm-0 rounded-circle" style="width: 40px; height: 40px; background-color: #090db7; margin-left: 12px !important;" onclick="loja.metodos.obterItensPorPesquisa()"><i class="bi-search"></i></button>
+          <input id="inputPesquisa" type="text" placeholder="Buscar..." style="border-radius: 20px; border: 2px solid #090db7;">
+          <button class="btn btn-success my-2 my-sm-0 rounded-circle" style="width: 40px; height: 40px; background-color: #090db7; margin-left: 12px !important;" onclick="loja.metodos.obterItensPorPesquisa()">
+            <i class="bi-search"></i>
+          </button>
         </div>
       </div>
     </nav>
+  
         
     <style>/* Reset CSS */
       * {
@@ -197,7 +215,7 @@
         }
       
         .navbar-left-custom-top-header, .navbar-right-custom-top-header {
-          width: 100%;
+          /* width: 100%; */
           text-align: center;
           margin-bottom: 10px;
         }
