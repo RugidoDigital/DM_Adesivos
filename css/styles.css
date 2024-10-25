@@ -655,8 +655,8 @@ progress {
 }
 @media (max-width: 768px) {
   #itensProdutos {
-    padding-right: 7.8rem;
-    padding-left: 7.8rem;
+    padding-right: 7.8vw;
+    padding-left: 7.8vw;
   }
 }
 @media (max-width: 576px) {
@@ -730,7 +730,7 @@ progress {
 
 .row-cols-2 > * {
   flex: 0 0 auto;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .row-cols-3 > * {

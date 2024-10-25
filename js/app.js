@@ -316,7 +316,7 @@ loja.templates = {
 
     item: `
         
-        <div class="col-12 mb-5">
+        <div class="col mb-5">
             <div class="card h-100">
                 <!-- Product image-->
                 <div class="card-title grid">
