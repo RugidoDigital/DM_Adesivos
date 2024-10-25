@@ -172,7 +172,7 @@ loja.metodos = {
     },
 
     obterItensPorTag: ( value ) => {
-        var categorias = []
+        var categorias, sub_categoria = []
         switch (value) {
             case 1:
                 categorias = ['MADEIRAS'];
@@ -191,6 +191,10 @@ loja.metodos = {
             break;
 
             case 5:
+                categorias = ['PISOMAX'];
+            break;
+
+            case 6:
                 categorias = ['DIVERSOS'];
             break;
 
@@ -198,7 +202,6 @@ loja.metodos = {
           }
 
         dadosFiltrados = MENU.filter(item => categorias.includes(item.categoria));
-
         console.log("tags chegando ", categorias);
 
         console.log("resultado ", dadosFiltrados);

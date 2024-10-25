@@ -634,7 +634,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MARMORE BRANCO MARQUINA MATTE",
       "img": "assets/img_produtos/11-Pisomax-Marmore-branco-marquina-matte-1920w.webp",
-      "categoria": " PEDRAS",
+      "categoria": " PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"
@@ -644,7 +644,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MADEIRA CILIEGIO",
       "img": "assets/img_produtos/PisoMax_Ciliegio_001-1920w.webp",
-      "categoria": "DIVERSOS",
+      "categoria": "PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"
@@ -654,7 +654,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MADEIRA MARFIM",
       "img": "assets/img_produtos/PisoMax_Marfin_001-1920w.webp",
-      "categoria": "DIVERSOS",
+      "categoria": "PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"
@@ -664,7 +664,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MARMORE CREMA ARMANI MATTE",
       "img": "assets/img_produtos/15-Pisomax-Marmore-crema-matte-opcao2-1920w.webp",
-      "categoria": "DIVERSOS",
+      "categoria": "PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"
@@ -674,7 +674,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MARMORE CINZA ARMANI MATTE",
       "img": "assets/img_produtos/13-Pisomax-Marmore-cinza-matte-opcap2-1920w.webp",
-      "categoria": "DIVERSOS",
+      "categoria": "PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"
@@ -684,7 +684,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MADEIRA JEQUITIBA MJ - 2301",
       "img": "assets/img_produtos/VINIL_PISOMAX_MADEIRA_JEQUITIBA_MJ_2301.webp",
-      "categoria": "DIVERSOS",
+      "categoria": "PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"
@@ -694,7 +694,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MADEIRA JEQUITIBA MJ - 2302",
       "img": "assets/img_produtos/VINIL_PISOMAX_MADEIRA_JEQUITIBA_MJ_2302.webp",
-      "categoria": "DIVERSOS",
+      "categoria": "PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"
@@ -704,7 +704,7 @@ var  MENU = [
       "marca": "Imprimax",
       "name": "VINIL PISOMAX MADEIRA JEQUITIBA MJ - 2303",
       "img": "assets/img_produtos/VINIL_PISOMAX_MADEIRA_JEQUITIBA_MJ_2303.webp",
-      "categoria": "DIVERSOS",
+      "categoria": "PISOMAX",
       "sub_categoria": "PISOMAX",
       "price": 74.9,
       "largura": "1.22M"

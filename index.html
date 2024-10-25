@@ -90,31 +90,36 @@
           <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
           <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
           <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(4)">Telados</a></li>
-          <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(5)">Diversos</a></li>
+          <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(5)">Pisomax</a></li>
+          <li><a href="#filter" onclick="loja.metodos.obterItensPorTag(6)">Diversos</a></li>
         </ul>
   
         <!-- Menu DropDown para telas menores -->
+        
+      </div>
+  
+      <div class="navbar-right-custom-top-header">
         <div class="dropdown d-lg-none">
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
+          <button class="btn btn-primary dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-none">Categorias</span><i class="bi bi-funnel-fill"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(1)">Madeiras</a></li>
             <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(2)">Pedras</a></li>
             <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(3)">Metais</a></li>
             <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(4)">Telados</a></li>
-            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(5)">Diversos</a></li>
+            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(5)">Pisomax</a></li>
+            <li><a class="dropdown-item" href="#filter" onclick="loja.metodos.obterItensPorTag(6)">Diversos</a></li>
           </ul>
         </div>
-      </div>
-  
-      <div class="navbar-right-custom-top-header">
-        <div class="search-form-custom-top-header">
-          <input id="inputPesquisa" type="text" placeholder="Buscar..." style="border-radius: 20px; border: 2px solid #090db7;">
-          <button class="btn btn-success my-2 my-sm-0 rounded-circle" style="width: 40px; height: 40px; background-color: #090db7; margin-left: 12px !important;" onclick="loja.metodos.obterItensPorPesquisa()">
+        <div class="search-form-custom-top-header input-group" style="border-radius: 20px; border: 2px solid #090db7; background: #090db7;">
+          <input id="inputPesquisa" type="text" class="form-control" 
+          placeholder="Buscar..." style="border: 0; border-radius: 20px;">
+          <span id="basic-addon1" type="button" class="btn btn-success rounded-circle" style="width: 40px; height: 40px; background-color: #090db7; border: 0" onclick="loja.metodos.obterItensPorPesquisa()">
             <i class="bi-search"></i>
-          </button>
+          </span>
         </div>
+        
       </div>
     </nav>
   
@@ -139,8 +144,8 @@
       
       .navbar-custom-top-header {
         display: flex;
-        justify-content: space-around;
-        padding: 5px 35px;
+        justify-content: center;
+        padding: 5px 5px;
         background-color: #F8F9FA;
         color: #fff;
         align-items: center;
