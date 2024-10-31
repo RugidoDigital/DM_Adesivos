@@ -11317,7 +11317,7 @@ form {
   z-index: 1; /* Garante que a imagem fique abaixo do navbar */
   top: 0px;
   padding: 1vw; 
-  background-image: url(/assets/assets_img/banner-site.jpg);
+  background: var(--bs-warning);
   background-repeat: round;
 }
 @media (max-width: 417px) {
