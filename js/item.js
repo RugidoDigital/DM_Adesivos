@@ -313,7 +313,7 @@ loja.templates = {  // R$ \${price}
                                     >+</button>
                                 </div>
                             </div>
-                            <div class="product-description">
+                            <div class="product-description p-2">
                                 <p>Sobre este item</p>
                                 <ul>
                                     <li>Largura: \${largura}</li>

@@ -54,7 +54,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -78,6 +78,7 @@
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
   --card-bord:#090DB7;
+  --navbar-bg-color: #f8f9fa; /* Cor padrão ou escolha outra */
 
   /* ICON */
   --icon-Trash: '\F5DD';
@@ -102,7 +103,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -3796,6 +3797,17 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
+
+/* Variável para a cor de fundo da navbar */
+.navbar-bg {
+  background-color: var(--navbar-bg-color);
+  padding: 1rem; /* Ajuste o padding, se necessário */
+}
+
+.navbar-custom-top-header {
+  width: 100%;
+}
+
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
   padding-bottom: var(--bs-navbar-brand-padding-y);
@@ -11291,7 +11303,7 @@ form {
 }
 
 .collapsed {
-  display: none;
+  display: block;
 }
 
 .constom_container{
@@ -11501,7 +11513,7 @@ form {
 }
 
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
