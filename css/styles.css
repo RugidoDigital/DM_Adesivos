@@ -3806,6 +3806,13 @@ textarea.form-control-lg {
 
 .navbar-custom-top-header {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 5px;
+  background-color: #F8F9FA;
+  color: #fff;
+  align-items: center;
+  z-index: 1;
 }
 
 .navbar-brand {
